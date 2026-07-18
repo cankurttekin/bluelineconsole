@@ -21,6 +21,12 @@
             app:iconSpaceReserved="false"
             >
         </Preference>
+        <Preference
+            android:key="pref_default_home_app"
+            android:title="@string/preferences_item_default_home_app_title"
+            android:summary="@string/preferences_item_default_home_app_summary"
+            app:iconSpaceReserved="false"
+            />
         <SwitchPreference
             android:key="pref_main_always_show_notification"
             android:title="@string/preferences_item_main_always_show_notification_title"
@@ -138,6 +144,16 @@
         android:title="@string/preferences_category_home_screen"
         app:iconSpaceReserved="false"
         >
+        <Preference
+            android:key="pref_home_set_solid_color_wallpaper"
+            android:title="@string/preferences_item_home_set_solid_color_wallpaper_title"
+            app:iconSpaceReserved="false"
+            />
+        <Preference
+            android:key="pref_home_set_wallpaper"
+            android:title="@string/preferences_item_home_set_wallpaper_title"
+            app:iconSpaceReserved="false"
+            />
         <Preference
             android:title="@string/preferences_item_home_screen_default_items"
             android:summary="@string/preferences_item_home_screen_default_items_summary"

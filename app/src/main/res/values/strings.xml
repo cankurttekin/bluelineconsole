@@ -91,6 +91,8 @@
     <string name="preferences_item_main_show_startup_help_summary">This option just shows you the guidance for help command. It is better to disable this option once you remembered "help" command.</string>
     <string name="preferences_item_default_assist_app_title">Set as default assistant app</string>
     <string name="preferences_item_default_assist_app_summary">To open Blue Line Console by long-pressing home button everywhere, set it as default assistant app from setting menu.</string>
+    <string name="preferences_item_default_home_app_title">Set as default home app</string>
+    <string name="preferences_item_default_home_app_summary">To use Blue Line Console as your home screen, set it as default home app from setting menu.</string>
     <string name="preferences_item_main_always_show_notification_title">Always show icon as notification</string>
     <string name="preferences_item_main_always_show_notification_summary">Always show the notification icon to start Blue Line Console everywhere.</string>
     <string name="preferences_item_text_match_strategy_title">Text search matching style</string>
@@ -110,6 +112,8 @@
     <string name="preferences_item_default_search_option_none">(None)</string>
     <string name="preferences_item_custom_commands_widgets">Widget commands</string>
     <string name="preferences_item_home_screen_default_items">Home screen items</string>
+    <string name="preferences_item_home_set_solid_color_wallpaper_title">Set solid color as wallpaper</string>
+    <string name="preferences_item_home_set_wallpaper_title">Set wallpaper</string>
     <string name="preferences_item_home_screen_default_items_summary">Display results and widgets when nothing is input at home screen, when Blue Line Console is set to home app.</string>
     <string name="preferences_item_contacts_enable_search">Enable contacts search</string>
     <string name="preferences_item_contacts_search_permission_explanation">Enabling contacts search requires permission to read Contacts. You may be asked to grant the access to Contacts.</string>

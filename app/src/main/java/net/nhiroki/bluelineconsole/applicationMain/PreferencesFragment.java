@@ -1,9 +1,17 @@
 package net.nhiroki.bluelineconsole.applicationMain;
 
+import android.app.WallpaperManager;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
 
@@ -81,6 +89,55 @@ public class PreferencesFragment extends PreferenceFragmentCompat {
                     ((PreferencesActivity) PreferencesFragment.this.getActivity()).setComingBackFlag();
                     Intent intent = new Intent(ACTION_VOICE_INPUT_SETTINGS);
                     PreferencesFragment.this.startActivity(intent);
+                    return true;
+                }
+        );
+
+        findPreference("pref_default_home_app").setOnPreferenceClickListener(
+                preference -> {
+                    ((PreferencesActivity) PreferencesFragment.this.getActivity()).setComingBackFlag();
+                    Intent intent = new Intent(Settings.ACTION_HOME_SETTINGS);
+                    PreferencesFragment.this.startActivity(intent);
+                    return true;
+                }
+        );
+
+        findPreference("pref_home_set_solid_color_wallpaper").setOnPreferenceClickListener(
+                preference -> {
+                    final EditText input = new EditText(getContext());
+                    input.setHint("#000000");
+                    new AlertDialog.Builder(getContext())
+                            .setTitle(R.string.preferences_item_home_set_solid_color_wallpaper_title)
+                            .setView(input)
+                            .setPositiveButton(R.string.button_ok, (dialog, which) -> {
+                                try {
+                                    int color = Color.parseColor(input.getText().toString());
+                                    WallpaperManager wm = WallpaperManager.getInstance(getContext());
+                                    int width = wm.getDesiredMinimumWidth();
+                                    int height = wm.getDesiredMinimumHeight();
+                                    if (width <= 0 || height <= 0) {
+                                        width = getResources().getDisplayMetrics().widthPixels;
+                                        height = getResources().getDisplayMetrics().heightPixels;
+                                    }
+                                    Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+                                    Canvas canvas = new Canvas(bitmap);
+                                    canvas.drawColor(color);
+                                    wm.setBitmap(bitmap);
+                                    Toast.makeText(getContext(), "Wallpaper set", Toast.LENGTH_SHORT).show();
+                                } catch (Exception e) {
+                                    Toast.makeText(getContext(), "Invalid color", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .setNegativeButton(R.string.button_cancel, null)
+                            .show();
+                    return true;
+                }
+        );
+
+        findPreference("pref_home_set_wallpaper").setOnPreferenceClickListener(
+                preference -> {
+                    Intent intent = new Intent(Intent.ACTION_SET_WALLPAPER);
+                    startActivity(Intent.createChooser(intent, getString(R.string.preferences_item_home_set_wallpaper_title)));
                     return true;
                 }
         );
