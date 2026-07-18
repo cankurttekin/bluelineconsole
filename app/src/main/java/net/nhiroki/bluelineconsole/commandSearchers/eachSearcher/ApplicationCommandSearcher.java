@@ -182,12 +182,18 @@ public class ApplicationCommandSearcher implements CommandSearcher {
             AlertDialog.Builder builder = new AlertDialog.Builder(activity);
             builder.setTitle(title);
             builder.setItems(new CharSequence[]{
+                    activity.getString(R.string.menu_item_app_info),
                     activity.getString(R.string.menu_item_rename),
                     isHidden ? activity.getString(R.string.menu_item_unhide) : activity.getString(R.string.menu_item_hide),
                     activity.getString(R.string.menu_item_uninstall)
             }, (dialog, which) -> {
                 switch (which) {
-                    case 0: // Rename
+                    case 0: // App Info
+                        Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        intent.setData(Uri.parse("package:" + packageName));
+                        activity.startActivity(intent);
+                        break;
+                    case 1: // Rename
                         AlertDialog.Builder renameBuilder = new AlertDialog.Builder(activity);
                         renameBuilder.setTitle(String.format(activity.getString(R.string.dialog_title_rename_format), title));
                         final EditText input = new EditText(activity);
@@ -200,7 +206,7 @@ public class ApplicationCommandSearcher implements CommandSearcher {
                         renameBuilder.setNegativeButton(R.string.button_cancel, (dialog1, which1) -> dialog1.cancel());
                         renameBuilder.show();
                         break;
-                    case 1: // Hide / Unhide
+                    case 2: // Hide / Unhide
                         if (isHidden) {
                             ApplicationSettings.unhideApp(activity, packageName);
                         } else {
@@ -208,7 +214,7 @@ public class ApplicationCommandSearcher implements CommandSearcher {
                         }
                         activity.refreshSearch();
                         break;
-                    case 2: // Uninstall
+                    case 3: // Uninstall
                         try {
                             Uri packageUri = Uri.parse("package:" + packageName);
                             Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageUri);

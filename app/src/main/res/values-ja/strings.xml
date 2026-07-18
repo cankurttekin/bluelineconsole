@@ -171,6 +171,7 @@
     <string name="factor_error_factor_too_large">%1$sより大きな素因数を含んでいます</string>
 
     <!-- Application long-press menu -->
+    <string name="menu_item_app_info">アプリ情報</string>
     <string name="menu_item_rename">名前変更</string>
     <string name="menu_item_hide">非表示</string>
     <string name="menu_item_unhide">再表示</string>

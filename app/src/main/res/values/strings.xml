@@ -172,6 +172,7 @@
     <string name="factor_error_factor_too_large">includes factor larger than %1$s</string>
 
     <!-- Application long-press menu -->
+    <string name="menu_item_app_info">App Info</string>
     <string name="menu_item_rename">Rename</string>
     <string name="menu_item_hide">Hide</string>
     <string name="menu_item_unhide">Unhide</string>
