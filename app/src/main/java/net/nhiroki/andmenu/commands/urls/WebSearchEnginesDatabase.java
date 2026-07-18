@@ -131,7 +131,13 @@ public class WebSearchEnginesDatabase {
             ret.add(new WebSearchEngine("default-web-wikipedia-en", "wikipedia", "Wikipedia (en)", "Wikipedia (English)", "https://en.wikipedia.org/wiki/", true, true, false, this._disabledURLIDs));
         }
 
-        ret.add(new WebSearchEngine("default-web-duckduckgo", "duckduckgo", "DuckDuckGo", "DuckDuckGo", "https://duckduckgo.com/?q=", true, true, false, this._disabledURLIDs));
+        ret.add(new WebSearchEngine("default-web-youtube", "yt", "YouTube", "YouTube", "https://www.youtube.com/results?search_query=", true, true, false, this._disabledURLIDs));
+        ret.add(new WebSearchEngine("default-web-youtube-music", "ytm", "YouTube Music", "YouTube Music", "https://music.youtube.com/search?q=", true, true, false, this._disabledURLIDs));
+        ret.add(new WebSearchEngine("default-google-maps", "gm", "Google Maps", "Google Maps", "https://www.google.com/maps?q=", true, true, false, this._disabledURLIDs));
+
+        ret.add(new WebSearchEngine("default-web-duckduckgo", "d", "DuckDuckGo", "DuckDuckGo", "https://duckduckgo.com/?q=", true, true, false, this._disabledURLIDs));
+
+        ret.add(new WebSearchEngine("default-web-ecosia", "ec", "Ecosia", "Ecosia", "https://www.ecosia.org/search?q=", true, true, false, this._disabledURLIDs));
 
         ret.add(new WebSearchEngine("default-web-bing", "bing", "Bing", "Bing", "https://www.bing.com/search?q=", true, true, false, this._disabledURLIDs));
         ret.add(new WebSearchEngine("default-web-bing-en", "bing", "Bing (English)", "Bing (English)", "https://www.bing.com/search?setlang=en-us&q=", true, true, false, this._disabledURLIDs));

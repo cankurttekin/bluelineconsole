@@ -9,10 +9,14 @@ Keyboard based launcher for Android
 ### TODO
 - [ ] Fuzzy search option
 - [ ] Sort by usage freq. option
-- [ ] New search engines (ecosia, maps, yt, yt music, etc)
+- [x] New search engines (ecosia, maps, yt, yt music, etc)
 - [ ] Custom commands
 - [ ] Search files, images etc
 - [ ] Todo or note taking
+- [x] Long press apps to show app info, uninstall, hide and rename
+- [x] New themes (dmenu, gruvbox, rosepine, etc)
+- [x] Set as default launcher option
+- [x] Set wallpaper or solid color
 
 
 ---
