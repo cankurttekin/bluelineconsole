@@ -37,8 +37,9 @@
     <string name="widget_launcher_label">andmenu のショートカット</string>
 
     <!-- String match strategies -->
-    <string name="string_match_strategy_substring">通常</string>
-    <string name="string_match_strategy_skipped_substring">一部一致 （例： \"abd\" で \"abcdef\" がヒット）</string>
+    <string name="string_match_strategy_substring">通常 (部分一致)</string>
+    <string name="string_match_strategy_skipped_substring">一部一致</string>
+    <string name="string_match_strategy_fuzzy">あいまい検索 (Fuzzy match)</string>
 
     <!-- Notification for OS -->
     <string name="notification_launch_this_app">andmenu を起動</string>

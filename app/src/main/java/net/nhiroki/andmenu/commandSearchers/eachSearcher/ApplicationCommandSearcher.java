@@ -30,7 +30,9 @@ import net.nhiroki.andmenu.interfaces.EventLauncher;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ApplicationCommandSearcher implements CommandSearcher {
     private ApplicationDatabase applicationDatabase;
@@ -66,6 +68,8 @@ public class ApplicationCommandSearcher implements CommandSearcher {
         final boolean matchAllApplications = query.equalsIgnoreCase("all_apps");
         final boolean matchHiddenApplications = query.equalsIgnoreCase("hidden_apps");
 
+        final int matchStrategy = StringMatchStrategy.getStrategyPreference(context);
+
         List<Pair<Integer, CandidateEntry>> appCandidates = new ArrayList<>();
         for (ApplicationInformation applicationInformation : applicationDatabase.getApplicationInformationList()) {
             boolean isHidden = ApplicationSettings.isHidden(context, applicationInformation.getPackageName());
@@ -83,13 +87,13 @@ public class ApplicationCommandSearcher implements CommandSearcher {
                 continue;
             }
 
-            int appLabelMatchResult = StringMatchStrategy.match(context, query, appLabel, false);
+            int appLabelMatchResult = StringMatchStrategy.match(query, appLabel, false, matchStrategy);
             if (appLabelMatchResult != -1) {
                 appCandidates.add(new Pair<>(appLabelMatchResult, new AppOpenCandidateEntry(context, applicationInformation, androidApplicationInfo, appLabel)));
                 continue;
             }
 
-            int packageNameMatchResult = StringMatchStrategy.match(context, query, applicationInformation.getPackageName(), false);
+            int packageNameMatchResult = StringMatchStrategy.match(query, applicationInformation.getPackageName(), false, matchStrategy);
             if (packageNameMatchResult != -1) {
                 appCandidates.add(new Pair<>(100000 + packageNameMatchResult, new AppOpenCandidateEntry(context, applicationInformation, androidApplicationInfo, appLabel)));
                 //noinspection UnnecessaryContinue
@@ -99,15 +103,29 @@ public class ApplicationCommandSearcher implements CommandSearcher {
 
         final boolean sortByUsage = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("pref_apps_sort_by_usage", false);
 
-        Collections.sort(appCandidates, (o1, o2) -> {
-            int scoreCompare = o1.first.compareTo(o2.first);
-            if (scoreCompare != 0 || !sortByUsage) {
-                return scoreCompare;
+        if (sortByUsage) {
+            final Map<String, Integer> usageCache = new HashMap<>();
+            for (Pair<Integer, CandidateEntry> pair : appCandidates) {
+                String pkg = ((AppOpenCandidateEntry) pair.second).getPackageName();
+                if (!usageCache.containsKey(pkg)) {
+                    usageCache.put(pkg, ApplicationUsageHistory.getUsageCount(context, pkg));
+                }
             }
-            int usage1 = ApplicationUsageHistory.getUsageCount(context, ((AppOpenCandidateEntry)o1.second).getPackageName());
-            int usage2 = ApplicationUsageHistory.getUsageCount(context, ((AppOpenCandidateEntry)o2.second).getPackageName());
-            return Integer.compare(usage2, usage1); // Descending
-        });
+
+            Collections.sort(appCandidates, (o1, o2) -> {
+                int scoreCompare = o1.first.compareTo(o2.first);
+                if (scoreCompare != 0) {
+                    return scoreCompare;
+                }
+                Integer u1 = usageCache.get(((AppOpenCandidateEntry) o1.second).getPackageName());
+                Integer u2 = usageCache.get(((AppOpenCandidateEntry) o2.second).getPackageName());
+                int usage1 = (u1 != null) ? u1 : 0;
+                int usage2 = (u2 != null) ? u2 : 0;
+                return Integer.compare(usage2, usage1); // Descending
+            });
+        } else {
+            Collections.sort(appCandidates, (o1, o2) -> o1.first.compareTo(o2.first));
+        }
 
         for (Pair<Integer, CandidateEntry> entry : appCandidates) {
             candidates.add(entry.second);

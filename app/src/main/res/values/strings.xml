@@ -38,8 +38,9 @@
     <string name="widget_launcher_label">andmenu shortcut</string>
 
     <!-- String match strategies -->
-    <string name="string_match_strategy_substring">Normal</string>
+    <string name="string_match_strategy_substring">Normal (Substring)</string>
     <string name="string_match_strategy_skipped_substring">Skipped substring (e.g. \"abd\" for \"abcdef\")</string>
+    <string name="string_match_strategy_fuzzy">Fuzzy match</string>
 
     <!-- Notification for OS -->
     <string name="notification_launch_this_app">Launch andmenu</string>

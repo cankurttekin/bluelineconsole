@@ -32,8 +32,9 @@
     <string name="widget_launcher_label">andmenu 바로가기</string>
 
     <!-- String match strategies -->
-    <string name="string_match_strategy_substring">보통</string>
-    <string name="string_match_strategy_skipped_substring">부분 일치 (예: \"abcdef\"이 \"abd\"를 포함)</string>
+    <string name="string_match_strategy_substring">보통 (부분 일치)</string>
+    <string name="string_match_strategy_skipped_substring">일부 일치</string>
+    <string name="string_match_strategy_fuzzy">퍼지 매칭 (Fuzzy match)</string>
 
     <!-- Notification for OS -->
     <string name="notification_launch_this_app">andmenu을 기동</string>

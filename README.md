@@ -7,7 +7,7 @@ Keyboard based launcher for Android
 <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="240"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="240"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="240">
 
 ### TODO
-- [ ] Fuzzy search option
+- [x] Fuzzy search option
 - [x] Sort by usage freq. option
 - [x] New search engines (ecosia, maps, yt, yt music, etc)
 - [ ] Custom commands
