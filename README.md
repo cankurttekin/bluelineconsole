@@ -6,5 +6,15 @@ Keyboard based launcher for Android
 ### Screenshots
 <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="240"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="240"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="240">
 
+### TODO
+- [ ] Fuzzy search option
+- [ ] Sort by usage freq. option
+- [ ] New search engines (ecosia, maps, yt, yt music, etc)
+- [ ] Custom commands
+- [ ] Search files, images etc
+- [ ] Todo or note taking
+
+
+---
 #### Attribution 
 [Blue Line Console](https://github.com/nhirokinet/bluelineconsole)
