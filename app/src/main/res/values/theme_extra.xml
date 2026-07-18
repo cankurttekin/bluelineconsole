@@ -42,7 +42,27 @@
     </style>
 
     <!-- dmenu -->
-    <style name="AppThemeDmenu" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppThemeDmenu" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorBackground">#eeeeee</item>
+        <item name="android:textColor">#222222</item>
+        <item name="andmenuAccentColor">@color/dmenu_accent</item>
+        <item name="andmenuBaseTextColor">#222222</item>
+        <item name="andmenuFrameColor">#eeeeee</item>
+        <item name="andmenuFrameTextColor">#222222</item>
+        <item name="andmenuSelectedItemBackgroundColor">#cccccc</item>
+        <item name="andmenuBackgroundColorOfCommand">#eeeeee</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AppThemeDmenuHome" parent="AppThemeDmenu">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+
+    <style name="AppThemeDmenuDark" parent="Theme.AppCompat.NoActionBar">
         <item name="android:colorBackground">@color/dmenu_bg</item>
         <item name="android:textColor">@color/dmenu_fg</item>
         <item name="andmenuAccentColor">@color/dmenu_accent</item>
@@ -55,7 +75,7 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
-    <style name="AppThemeDmenuHome" parent="AppThemeDmenu">
+    <style name="AppThemeDmenuDarkHome" parent="AppThemeDmenuDark">
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:windowBackground">@android:color/transparent</item>

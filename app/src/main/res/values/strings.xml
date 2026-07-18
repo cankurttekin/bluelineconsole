@@ -23,14 +23,16 @@
     <string name="result_config_summary">Preferences for andmenu</string>
 
     <!-- Themes -->
-    <string name="theme_name_default">Default (Light or Dark, according to system setting)</string>
-    <string name="theme_name_light">Light</string>
-    <string name="theme_name_dark">Dark</string>
+    <string name="theme_name_default">Blue Line Console (Light or Dark, according to system setting)</string>
+    <string name="theme_name_light">Blue Line Console Light</string>
+    <string name="theme_name_dark">Blue Line Console Dark</string>
     <string name="theme_name_marine">Marine</string>
     <string name="theme_name_old_computer">Old Computer</string>
     <string name="theme_name_gruvbox">Gruvbox</string>
     <string name="theme_name_rosepine">Rose Pine</string>
-    <string name="theme_name_dmenu">dmenu</string>
+    <string name="theme_name_dmenu">dmenu (Light or Dark, according to system setting)</string>
+    <string name="theme_name_dmenu_light">dmenu Light</string>
+    <string name="theme_name_dmenu_dark">dmenu Dark</string>
 
     <!-- Widgets -->
     <string name="widget_launcher_label">andmenu shortcut</string>

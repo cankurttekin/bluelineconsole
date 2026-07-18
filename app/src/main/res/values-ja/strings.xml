@@ -22,14 +22,16 @@
     <string name="result_config_summary">andmenu の設定</string>
 
     <!-- Themes -->
-    <string name="theme_name_default">デフォルト（ライトまたはダーク、システム設定に従う）</string>
-    <string name="theme_name_light">ライト</string>
-    <string name="theme_name_dark">ダーク</string>
+    <string name="theme_name_default">Blue Line Console（ライトまたはダーク、システム設定に従う）</string>
+    <string name="theme_name_light">Blue Line Console ライト</string>
+    <string name="theme_name_dark">Blue Line Console ダーク</string>
     <string name="theme_name_marine">マリン</string>
     <string name="theme_name_old_computer">オールド・コンピュータ</string>
     <string name="theme_name_gruvbox">Gruvbox</string>
     <string name="theme_name_rosepine">Rose Pine</string>
-    <string name="theme_name_dmenu">dmenu</string>
+    <string name="theme_name_dmenu">dmenu（ライトまたはダーク、システム設定に従う）</string>
+    <string name="theme_name_dmenu_light">dmenu ライト</string>
+    <string name="theme_name_dmenu_dark">dmenu ダーク</string>
 
     <!-- Widgets -->
     <string name="widget_launcher_label">andmenu のショートカット</string>

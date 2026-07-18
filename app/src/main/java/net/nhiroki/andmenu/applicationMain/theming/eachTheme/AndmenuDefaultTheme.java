@@ -19,7 +19,7 @@ import net.nhiroki.andmenu.R;
 import net.nhiroki.andmenu.applicationMain.BaseWindowActivity;
 
 public class AndmenuDefaultTheme extends BaseTheme {
-    private static final String THEME_ID = "default";
+    private static final String THEME_ID = "blue_line_console";
     private static final @StringRes int THEME_TITLE_STRING_RES = R.string.theme_name_default;
 
 
@@ -113,6 +113,9 @@ public class AndmenuDefaultTheme extends BaseTheme {
         super.changeBaseWindowElementSizeForAnimation(activity, visible);
 
         final View centerLLOuter = activity.findViewById(R.id.baseWindowDefaultThemeMainLinearLayoutOuter);
+        if (centerLLOuter == null) {
+            return;
+        }
         final LinearLayout.LayoutParams centerLPOuter = (LinearLayout.LayoutParams) centerLLOuter.getLayoutParams();
         if (visible) {
             centerLPOuter.height = activity.isSmallWindow() ? LinearLayout.LayoutParams.WRAP_CONTENT : LinearLayout.LayoutParams.MATCH_PARENT;
@@ -136,13 +139,5 @@ public class AndmenuDefaultTheme extends BaseTheme {
         context.getTheme().resolveAttribute(R.attr.andmenuAccentColor, accentColorFromTheme, true);
 
         return accentColorFromTheme.data;
-    }
-
-    protected static boolean isSystemCurrentlyNightMode(Context context) {
-        return Build.VERSION.SDK_INT >= 29 && (context.getApplicationContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
-    }
-
-    protected boolean isDarkMode(Context context) {
-        return isSystemCurrentlyNightMode(context);
     }
 }

@@ -2,9 +2,13 @@ package net.nhiroki.andmenu.applicationMain.theming.eachTheme;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
@@ -21,6 +25,13 @@ import net.nhiroki.andmenu.applicationMain.theming.AppTheme;
 
 
 public abstract class BaseTheme implements AppTheme {
+    protected boolean shouldShowWallpaper(BaseWindowActivity activity) {
+        if (!activity.isHomeActivity()) {
+            return false;
+        }
+        return PreferenceManager.getDefaultSharedPreferences(activity).getString("pref_home_background_style", "wallpaper").equals("wallpaper");
+    }
+
     @CallSuper
     @Override
     public void apply(BaseWindowActivity activity) {
@@ -136,6 +147,9 @@ public abstract class BaseTheme implements AppTheme {
     public void changeBaseWindowElementSizeForAnimation(BaseWindowActivity activity, boolean visible) {
         final boolean smallWindow = activity.isSmallWindow();
         LinearLayout centerLL = activity.findViewById(R.id.baseWindowMainLinearLayout);
+        if (centerLL == null || centerLL.getChildCount() == 0) {
+            return;
+        }
         View mainLL = centerLL.getChildAt(0);
         LinearLayout.LayoutParams mainLP = (LinearLayout.LayoutParams) mainLL.getLayoutParams();
 
@@ -187,13 +201,19 @@ public abstract class BaseTheme implements AppTheme {
     @CallSuper
     @Override
     public void onCreateFinal(BaseWindowActivity activity) {
-        ((LinearLayout)activity.findViewById(R.id.baseWindowMainLinearLayout)).getChildAt(0).setOnClickListener(null);
+        LinearLayout centerLL = activity.findViewById(R.id.baseWindowMainLinearLayout);
+        if (centerLL != null && centerLL.getChildCount() > 0) {
+            centerLL.getChildAt(0).setOnClickListener(null);
+        }
     }
 
     @CallSuper
     @Override
     public void setOnTouchListenerForTitleBar(BaseWindowActivity activity, View.OnTouchListener onTouchListenerForTitleBar) {
-        activity.findViewById(R.id.baseWindowHeaderWrapper).setOnTouchListener(onTouchListenerForTitleBar);
+        View headerWrapper = activity.findViewById(R.id.baseWindowHeaderWrapper);
+        if (headerWrapper != null) {
+            headerWrapper.setOnTouchListener(onTouchListenerForTitleBar);
+        }
     }
 
     @CallSuper
@@ -224,6 +244,14 @@ public abstract class BaseTheme implements AppTheme {
             final int horizontal = Math.max((displaySize.x - panelWidth) / 2, baseHorizontalMarginInPixels);
             this.findVisibleRootView(activity).setPadding(horizontal, baseVerticalMarginInPixels, horizontal, baseVerticalMarginInPixels);
         }
+    }
+
+    protected static boolean isSystemCurrentlyNightMode(Context context) {
+        return Build.VERSION.SDK_INT >= 29 && (context.getApplicationContext().getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
+
+    protected boolean isDarkMode(Context context) {
+        return isSystemCurrentlyNightMode(context);
     }
 
     private static class ExitOnClickListener implements View.OnClickListener {

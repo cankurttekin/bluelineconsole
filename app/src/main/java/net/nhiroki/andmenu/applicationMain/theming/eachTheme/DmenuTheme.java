@@ -4,30 +4,39 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.view.Gravity;
 import android.widget.RemoteViews;
+
 import androidx.annotation.ColorInt;
-import androidx.appcompat.app.AppCompatDelegate;
+import androidx.annotation.StringRes;
+
 import net.nhiroki.andmenu.R;
 import net.nhiroki.andmenu.applicationMain.BaseWindowActivity;
 
 public class DmenuTheme extends BaseTheme {
     private static final String THEME_ID = "dmenu";
+    private static final @StringRes int THEME_TITLE_STRING_RES = R.string.theme_name_dmenu;
+
+    @Override
+    protected void configureDarkMode() {
+    }
 
     @Override
     public void apply(BaseWindowActivity activity) {
         super.apply(activity);
-        activity.setTheme(activity.isHomeActivity() ? R.style.AppThemeDmenuHome : R.style.AppThemeDmenu);
+
+        if (this.isDarkMode(activity)) {
+            activity.setTheme(activity.isHomeActivity() ? R.style.AppThemeDmenuDarkHome : R.style.AppThemeDmenuDark);
+        } else {
+            activity.setTheme(activity.isHomeActivity() ? R.style.AppThemeDmenuHome : R.style.AppThemeDmenu);
+        }
         activity.setContentView(R.layout.base_window_layout_dmenu);
+
         this.registerExitListener(activity, activity.isHomeActivity());
 
         this.setWindowLocationGravity(activity, Gravity.TOP);
     }
 
     @Override
-    public void applyAccentColor(BaseWindowActivity activity, @ColorInt int color) {}
-
-    @Override
-    protected void configureDarkMode() {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+    public void applyAccentColor(BaseWindowActivity activity, @ColorInt int color) {
     }
 
     @Override
@@ -37,12 +46,12 @@ public class DmenuTheme extends BaseTheme {
 
     @Override
     public CharSequence getThemeTitle(Context context) {
-        return context.getString(R.string.theme_name_dmenu);
+        return context.getString(THEME_TITLE_STRING_RES);
     }
 
     @Override
     protected boolean hasFooter() {
-        return false;
+        return true;
     }
 
     @Override
@@ -56,7 +65,11 @@ public class DmenuTheme extends BaseTheme {
     }
 
     @Override
-    public int getDefaultAccentColor(Context context) {
+    public @ColorInt int getDefaultAccentColor(Context context) {
         return 0;
+    }
+
+    @Override
+    public void onCreateFinal(BaseWindowActivity activity) {
     }
 }

@@ -6,6 +6,8 @@ import android.preference.PreferenceManager;
 import net.nhiroki.andmenu.applicationMain.theming.eachTheme.AndmenuDarkTheme;
 import net.nhiroki.andmenu.applicationMain.theming.eachTheme.AndmenuDefaultTheme;
 import net.nhiroki.andmenu.applicationMain.theming.eachTheme.AndmenuLightTheme;
+import net.nhiroki.andmenu.applicationMain.theming.eachTheme.DmenuDarkTheme;
+import net.nhiroki.andmenu.applicationMain.theming.eachTheme.DmenuLightTheme;
 import net.nhiroki.andmenu.applicationMain.theming.eachTheme.DmenuTheme;
 import net.nhiroki.andmenu.applicationMain.theming.eachTheme.GruvboxTheme;
 import net.nhiroki.andmenu.applicationMain.theming.eachTheme.MarineTheme;
@@ -20,6 +22,9 @@ public class AppThemeDirectory {
     public static final String PREF_NAME_THEME = "pref_appearance_theme";
 
     private static final AppTheme[] THEMES = {
+            new DmenuTheme(),
+            new DmenuLightTheme(),
+            new DmenuDarkTheme(),
             new AndmenuDefaultTheme(),
             new AndmenuLightTheme(),
             new AndmenuDarkTheme(),
@@ -27,7 +32,6 @@ public class AppThemeDirectory {
             new OldComputerTheme(),
             new GruvboxTheme(),
             new RosePineTheme(),
-            new DmenuTheme(),
     };
 
     private static Map<String, AppTheme> themeMap;
@@ -60,6 +64,10 @@ public class AppThemeDirectory {
             for (AppTheme theme: THEMES) {
                 themeMap.put(theme.getThemeID(), theme);
             }
+        }
+
+        if (themeName == null || themeName.isEmpty() || themeName.equals("default")) {
+            return THEMES[0];
         }
 
         AppTheme ret = themeMap.get(themeName);
