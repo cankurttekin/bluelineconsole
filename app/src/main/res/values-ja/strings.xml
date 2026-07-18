@@ -107,6 +107,8 @@
     <string name="preferences_item_appearance_show_icons_title">アイコンを表示</string>
     <string name="preferences_item_apps_show_package_name_title">パッケージ名を表示</string>
     <string name="preferences_item_apps_show_package_name_summary">註：このチェックがオフでも、パッケージ名の一部でアプリを検索できます。</string>
+    <string name="preferences_item_apps_sort_by_usage_title">使用頻度順にソート</string>
+    <string name="preferences_item_apps_sort_by_usage_summary">よく使うアプリを検索結果の上位に表示します。</string>
     <string name="preferences_item_display_custom_urls_title">URL と検索エンジンの呼び出し設定</string>
     <string name="preferences_item_default_search_title">デフォルト検索エンジン</string>
     <string name="preferences_item_default_search_summary">常に設定した検索エンジンでの検索を一覧に表示します</string>

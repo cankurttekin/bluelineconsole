@@ -108,6 +108,8 @@
     <string name="preferences_item_appearance_show_icons_title">Show icons</string>
     <string name="preferences_item_apps_show_package_name_title">Show package name</string>
     <string name="preferences_item_apps_show_package_name_summary">Note: You can find apps by a part of package name even this check is off.</string>
+    <string name="preferences_item_apps_sort_by_usage_title">Sort by usage frequency</string>
+    <string name="preferences_item_apps_sort_by_usage_summary">Display frequently used apps at the top of the search results.</string>
     <string name="preferences_item_display_custom_urls_title">Web pages and searches</string>
     <string name="preferences_item_default_search_title">Default Search Engine</string>
     <string name="preferences_item_default_search_summary">Always show specific search engine on the bottom of list</string>

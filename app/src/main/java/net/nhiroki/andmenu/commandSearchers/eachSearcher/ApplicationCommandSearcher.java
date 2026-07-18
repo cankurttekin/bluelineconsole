@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.Drawable;
-import android.preference.PreferenceManager;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +15,14 @@ import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.preference.PreferenceManager;
 
 import net.nhiroki.andmenu.R;
 import net.nhiroki.andmenu.applicationMain.MainActivity;
 import net.nhiroki.andmenu.commandSearchers.lib.StringMatchStrategy;
 import net.nhiroki.andmenu.commands.applications.ApplicationDatabase;
 import net.nhiroki.andmenu.commands.applications.ApplicationSettings;
+import net.nhiroki.andmenu.commands.applications.ApplicationUsageHistory;
 import net.nhiroki.andmenu.dataStore.cache.ApplicationInformation;
 import net.nhiroki.andmenu.interfaces.CandidateEntry;
 import net.nhiroki.andmenu.interfaces.CommandSearcher;
@@ -96,7 +97,17 @@ public class ApplicationCommandSearcher implements CommandSearcher {
             }
         }
 
-        Collections.sort(appCandidates, (o1, o2) -> o1.first.compareTo(o2.first));
+        final boolean sortByUsage = PreferenceManager.getDefaultSharedPreferences(context).getBoolean("pref_apps_sort_by_usage", false);
+
+        Collections.sort(appCandidates, (o1, o2) -> {
+            int scoreCompare = o1.first.compareTo(o2.first);
+            if (scoreCompare != 0 || !sortByUsage) {
+                return scoreCompare;
+            }
+            int usage1 = ApplicationUsageHistory.getUsageCount(context, ((AppOpenCandidateEntry)o1.second).getPackageName());
+            int usage2 = ApplicationUsageHistory.getUsageCount(context, ((AppOpenCandidateEntry)o2.second).getPackageName());
+            return Integer.compare(usage2, usage1); // Descending
+        });
 
         for (Pair<Integer, CandidateEntry> entry : appCandidates) {
             candidates.add(entry.second);
@@ -110,6 +121,10 @@ public class ApplicationCommandSearcher implements CommandSearcher {
         private final ApplicationInfo androidApplicationInfo;
         private final String title;
         private final boolean displayPackageName;
+
+        public String getPackageName() {
+            return applicationInformation.getPackageName();
+        }
 
         // Getting app title in Android is slow, so app title also should be given via constructor from cache.
         AppOpenCandidateEntry(Context context, ApplicationInformation applicationInformation, ApplicationInfo androidApplicationInfo, String appTitle) {
@@ -148,6 +163,7 @@ public class ApplicationCommandSearcher implements CommandSearcher {
         public EventLauncher getEventLauncher(final Context context) {
             return activity -> {
                 String packageName = AppOpenCandidateEntry.this.applicationInformation.getPackageName();
+                ApplicationUsageHistory.recordUsage(activity, packageName);
                 Intent intent = activity.getPackageManager().getLaunchIntentForPackage(AppOpenCandidateEntry.this.applicationInformation.getPackageName());
                 if (packageName.equals(context.getPackageName())) {
                     // special case that happens to some curious behavior in home app

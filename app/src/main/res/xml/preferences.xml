@@ -98,6 +98,13 @@
         app:iconSpaceReserved="false"
         >
         <SwitchPreference
+            android:key="pref_apps_sort_by_usage"
+            android:title="@string/preferences_item_apps_sort_by_usage_title"
+            android:summary="@string/preferences_item_apps_sort_by_usage_summary"
+            android:defaultValue="false"
+            app:iconSpaceReserved="false"
+            />
+        <SwitchPreference
             android:key="pref_apps_show_package_name"
             android:title="@string/preferences_item_apps_show_package_name_title"
             android:summary="@string/preferences_item_apps_show_package_name_summary"

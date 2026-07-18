@@ -8,7 +8,7 @@ Keyboard based launcher for Android
 
 ### TODO
 - [ ] Fuzzy search option
-- [ ] Sort by usage freq. option
+- [x] Sort by usage freq. option
 - [x] New search engines (ecosia, maps, yt, yt music, etc)
 - [ ] Custom commands
 - [ ] Search files, images etc
