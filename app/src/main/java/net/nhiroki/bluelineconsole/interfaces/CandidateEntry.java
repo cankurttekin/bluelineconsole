@@ -52,4 +52,9 @@ public interface CandidateEntry {
      * @return whether view from getView(Context) is recycle
      */
     boolean viewIsRecyclable();
+
+    /**
+     * @param activity Source activity that triggers new activity
+     */
+    default void onLongClick(MainActivity activity) {}
 }

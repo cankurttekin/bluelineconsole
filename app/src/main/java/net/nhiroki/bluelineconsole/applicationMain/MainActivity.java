@@ -84,6 +84,11 @@ public class MainActivity extends BaseWindowActivity {
 
         candidateListView.setOnItemClickListener((parent, view, position, id) -> resultCandidateListAdapter.invokeEvent(position, MainActivity.this));
 
+        candidateListView.setOnItemLongClickListener((parent, view, position, id) -> {
+            resultCandidateListAdapter.invokeLongClickEvent(position, MainActivity.this);
+            return true;
+        });
+
         candidateListView.setOnKeyListener((v, keyCode, event) -> {
             if (event.getAction() == KeyEvent.ACTION_DOWN && v.onKeyDown(keyCode, event)) {
                 return true;
@@ -286,7 +291,7 @@ public class MainActivity extends BaseWindowActivity {
         mainInputText.requestFocusFromTouch();
     }
 
-    private void executeSearch(String query) {
+    public void executeSearch(String query) {
         List<CandidateEntry> candidates = new ArrayList<>();
 
         if (! query.isEmpty()) {
@@ -314,6 +319,10 @@ public class MainActivity extends BaseWindowActivity {
         this.setWholeLayout();
 
         this.temporaryContentShown = true;
+    }
+
+    public void refreshSearch() {
+        this.executeSearch(mainInputText.getText().toString());
     }
 
     private void onCommandInput(final CharSequence query) {

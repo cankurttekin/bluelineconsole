@@ -8,16 +8,20 @@ import android.preference.PreferenceManager;
 import android.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.net.Uri;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 
 import net.nhiroki.bluelineconsole.R;
 import net.nhiroki.bluelineconsole.applicationMain.MainActivity;
 import net.nhiroki.bluelineconsole.commandSearchers.lib.StringMatchStrategy;
 import net.nhiroki.bluelineconsole.commands.applications.ApplicationDatabase;
+import net.nhiroki.bluelineconsole.commands.applications.ApplicationSettings;
 import net.nhiroki.bluelineconsole.dataStore.cache.ApplicationInformation;
 import net.nhiroki.bluelineconsole.interfaces.CandidateEntry;
 import net.nhiroki.bluelineconsole.interfaces.CommandSearcher;
@@ -59,13 +63,21 @@ public class ApplicationCommandSearcher implements CommandSearcher {
         List<CandidateEntry> candidates = new ArrayList<>();
 
         final boolean matchAllApplications = query.equalsIgnoreCase("all_apps");
+        final boolean matchHiddenApplications = query.equalsIgnoreCase("hidden_apps");
 
         List<Pair<Integer, CandidateEntry>> appCandidates = new ArrayList<>();
         for (ApplicationInformation applicationInformation : applicationDatabase.getApplicationInformationList()) {
-            final String appLabel = applicationInformation.getLabel();
+            boolean isHidden = ApplicationSettings.isHidden(context, applicationInformation.getPackageName());
+            if (isHidden && !matchHiddenApplications) {
+                continue;
+            }
+
+            String customLabel = ApplicationSettings.getCustomLabel(context, applicationInformation.getPackageName());
+            final String appLabel = (customLabel != null) ? customLabel : applicationInformation.getLabel();
+
             final ApplicationInfo androidApplicationInfo = applicationDatabase.getAndroidApplicationInfo(applicationInformation.getPackageName());
 
-            if (matchAllApplications) {
+            if (matchAllApplications || (matchHiddenApplications && isHidden)) {
                 appCandidates.add(new Pair<>(0, new AppOpenCandidateEntry(context, applicationInformation, androidApplicationInfo, appLabel)));
                 continue;
             }
@@ -160,6 +172,50 @@ public class ApplicationCommandSearcher implements CommandSearcher {
         @Override
         public Drawable getIcon(Context context) {
             return context.getPackageManager().getApplicationIcon(androidApplicationInfo);
+        }
+
+        @Override
+        public void onLongClick(MainActivity activity) {
+            String packageName = applicationInformation.getPackageName();
+            boolean isHidden = ApplicationSettings.isHidden(activity, packageName);
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+            builder.setTitle(title);
+            builder.setItems(new CharSequence[]{
+                    activity.getString(R.string.menu_item_rename),
+                    isHidden ? activity.getString(R.string.menu_item_unhide) : activity.getString(R.string.menu_item_hide),
+                    activity.getString(R.string.menu_item_delete)
+            }, (dialog, which) -> {
+                switch (which) {
+                    case 0: // Rename
+                        AlertDialog.Builder renameBuilder = new AlertDialog.Builder(activity);
+                        renameBuilder.setTitle(String.format(activity.getString(R.string.dialog_title_rename_format), title));
+                        final EditText input = new EditText(activity);
+                        input.setText(title);
+                        renameBuilder.setView(input);
+                        renameBuilder.setPositiveButton(R.string.button_ok, (dialog1, which1) -> {
+                            ApplicationSettings.setCustomLabel(activity, packageName, input.getText().toString());
+                            activity.refreshSearch();
+                        });
+                        renameBuilder.setNegativeButton(R.string.button_cancel, (dialog1, which1) -> dialog1.cancel());
+                        renameBuilder.show();
+                        break;
+                    case 1: // Hide / Unhide
+                        if (isHidden) {
+                            ApplicationSettings.unhideApp(activity, packageName);
+                        } else {
+                            ApplicationSettings.hideApp(activity, packageName);
+                        }
+                        activity.refreshSearch();
+                        break;
+                    case 2: // Delete
+                        Uri packageUri = Uri.parse("package:" + packageName);
+                        Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageUri);
+                        activity.startActivity(uninstallIntent);
+                        break;
+                }
+            });
+            builder.show();
         }
 
         @Override

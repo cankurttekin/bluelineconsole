@@ -172,6 +172,13 @@ class CandidateListAdapter extends ArrayAdapter<CandidateEntry> {
         }
     }
 
+    public void invokeLongClickEvent(int position, MainActivity activity) {
+        CandidateEntry entry = this.getItem(position);
+        if (entry != null) {
+            entry.onLongClick(activity);
+        }
+    }
+
     public void invokeFirstChoiceEvent(Context context) {
         if (getChosenNowExplicitly() >= 0) {
             invokeEvent(getChosenNowExplicitly(), context);

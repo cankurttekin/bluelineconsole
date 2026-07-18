@@ -45,6 +45,8 @@
     <string name="button_update">Update</string>
     <string name="button_delete">Delete</string>
     <string name="button_close">Close</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
     <string name="button_increment_minimal">+</string>
     <string name="button_decrement_minimal">-</string>
 
@@ -159,6 +161,13 @@
     <string name="factor_error_not_positive_number">is not positive number</string>
     <string name="factor_error_factor_too_large">includes factor larger than %1$s</string>
 
+    <!-- Application long-press menu -->
+    <string name="menu_item_rename">Rename</string>
+    <string name="menu_item_hide">Hide</string>
+    <string name="menu_item_unhide">Unhide</string>
+    <string name="menu_item_delete">Delete (Uninstall)</string>
+    <string name="dialog_title_rename_format">Rename %1$s</string>
+
     <!-- Error messages, user errors -->
     <string name="error_invalid_url_least_validation_for_web">Invalid URL: must start with https:// or http:// and at least one more slash (\"/\").</string>
     <string name="error_invalid_url_least_validation_for_web_arbitrary_schema">Invalid URL: must start with &lt;scheme&gt;:// and at least one more slash (\"/\").</string>
@@ -205,6 +214,7 @@
         \n-&#032;config
         \n-&#032;date
         \n-&#032;all_apps
+        \n-&#032;hidden_apps
         \n-&#032;cal [&lt;month&gt; &lt;year&gt;]
         \n-&#032;factor &lt;number&gt; ...
         \n-&#032;bing &lt;query&gt;
