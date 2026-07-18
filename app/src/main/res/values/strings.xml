@@ -28,6 +28,9 @@
     <string name="theme_name_dark">Dark</string>
     <string name="theme_name_marine">Marine</string>
     <string name="theme_name_old_computer">Old Computer</string>
+    <string name="theme_name_gruvbox">Gruvbox</string>
+    <string name="theme_name_rosepine">Rose Pine</string>
+    <string name="theme_name_dmenu">dmenu</string>
 
     <!-- Widgets -->
     <string name="widget_launcher_label">Blue Line Console shortcut</string>
@@ -92,6 +95,9 @@
     <string name="preferences_item_main_always_show_notification_summary">Always show the notification icon to start Blue Line Console everywhere.</string>
     <string name="preferences_item_text_match_strategy_title">Text search matching style</string>
     <string name="preferences_item_appearance_theme_title">Theme</string>
+    <string name="preferences_item_appearance_show_header_title">Show header text</string>
+    <string name="preferences_item_appearance_header_text_title">Header text</string>
+    <string name="preferences_item_appearance_placeholder_text_title">Input placeholder text</string>
     <string name="preferences_item_appearance_theme_summary">When this option is changed, Blue Line Console restarts immediately.</string>
     <string name="preferences_item_appearance_accent_color">Accent color</string>
     <string name="preferences_item_appearance_animation_title">Animation</string>
@@ -165,7 +171,7 @@
     <string name="menu_item_rename">Rename</string>
     <string name="menu_item_hide">Hide</string>
     <string name="menu_item_unhide">Unhide</string>
-    <string name="menu_item_delete">Delete (Uninstall)</string>
+    <string name="menu_item_uninstall">Uninstall</string>
     <string name="dialog_title_rename_format">Rename %1$s</string>
 
     <!-- Error messages, user errors -->

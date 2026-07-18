@@ -246,15 +246,25 @@ public class BaseWindowActivity extends AppCompatActivity {
     }
 
     public void enableWindowAnimationForEachViewGroup(ViewGroup viewGroup) {
+        if (viewGroup == null) {
+            return;
+        }
         LayoutTransition lt = viewGroup.getLayoutTransition();
-        lt.enableTransitionType(LayoutTransition.CHANGING);
-        viewGroup.setLayoutTransition(lt);
+        if (lt != null) {
+            lt.enableTransitionType(LayoutTransition.CHANGING);
+            viewGroup.setLayoutTransition(lt);
+        }
     }
 
     public void disableWindowAnimationForEachViewGroup(ViewGroup viewGroup) {
+        if (viewGroup == null) {
+            return;
+        }
         LayoutTransition lt = viewGroup.getLayoutTransition();
-        lt.disableTransitionType(LayoutTransition.CHANGING);
-        viewGroup.setLayoutTransition(lt);
+        if (lt != null) {
+            lt.disableTransitionType(LayoutTransition.CHANGING);
+            viewGroup.setLayoutTransition(lt);
+        }
     }
 
     @CallSuper

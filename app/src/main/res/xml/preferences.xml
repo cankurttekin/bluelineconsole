@@ -39,6 +39,25 @@
         android:title="@string/preferences_category_appearance"
         app:iconSpaceReserved="false"
         >
+        <SwitchPreference
+            android:key="pref_appearance_show_header"
+            android:defaultValue="true"
+            android:title="@string/preferences_item_appearance_show_header_title"
+            app:iconSpaceReserved="false"
+            />
+        <EditTextPreference
+            android:key="pref_appearance_header_text"
+            android:defaultValue="@string/app_name"
+            android:title="@string/preferences_item_appearance_header_text_title"
+            android:dependency="pref_appearance_show_header"
+            app:iconSpaceReserved="false"
+            />
+        <EditTextPreference
+            android:key="pref_mainedittext_placeholder"
+            android:defaultValue=""
+            android:title="@string/preferences_item_appearance_placeholder_text_title"
+            app:iconSpaceReserved="false"
+            />
         <ListPreference
             android:key="pref_appearance_theme"
             android:defaultValue="default"

@@ -184,7 +184,7 @@ public class ApplicationCommandSearcher implements CommandSearcher {
             builder.setItems(new CharSequence[]{
                     activity.getString(R.string.menu_item_rename),
                     isHidden ? activity.getString(R.string.menu_item_unhide) : activity.getString(R.string.menu_item_hide),
-                    activity.getString(R.string.menu_item_delete)
+                    activity.getString(R.string.menu_item_uninstall)
             }, (dialog, which) -> {
                 switch (which) {
                     case 0: // Rename
@@ -208,10 +208,15 @@ public class ApplicationCommandSearcher implements CommandSearcher {
                         }
                         activity.refreshSearch();
                         break;
-                    case 2: // Delete
-                        Uri packageUri = Uri.parse("package:" + packageName);
-                        Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageUri);
-                        activity.startActivity(uninstallIntent);
+                    case 2: // Uninstall
+                        try {
+                            Uri packageUri = Uri.parse("package:" + packageName);
+                            Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageUri);
+                            uninstallIntent.setData(packageUri);
+                            activity.startActivity(uninstallIntent);
+                        } catch (Exception e) {
+                            Toast.makeText(activity, "Could not start uninstaller", Toast.LENGTH_SHORT).show();
+                        }
                         break;
                 }
             });

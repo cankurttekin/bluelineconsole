@@ -6,8 +6,11 @@ import android.preference.PreferenceManager;
 import net.nhiroki.bluelineconsole.applicationMain.theming.eachTheme.BlueLineConsoleDarkTheme;
 import net.nhiroki.bluelineconsole.applicationMain.theming.eachTheme.BlueLineConsoleDefaultTheme;
 import net.nhiroki.bluelineconsole.applicationMain.theming.eachTheme.BlueLineConsoleLightTheme;
+import net.nhiroki.bluelineconsole.applicationMain.theming.eachTheme.DmenuTheme;
+import net.nhiroki.bluelineconsole.applicationMain.theming.eachTheme.GruvboxTheme;
 import net.nhiroki.bluelineconsole.applicationMain.theming.eachTheme.MarineTheme;
 import net.nhiroki.bluelineconsole.applicationMain.theming.eachTheme.OldComputerTheme;
+import net.nhiroki.bluelineconsole.applicationMain.theming.eachTheme.RosePineTheme;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +25,9 @@ public class AppThemeDirectory {
             new BlueLineConsoleDarkTheme(),
             new MarineTheme(),
             new OldComputerTheme(),
+            new GruvboxTheme(),
+            new RosePineTheme(),
+            new DmenuTheme(),
     };
 
     private static Map<String, AppTheme> themeMap;

@@ -1,0 +1,64 @@
+<resources>
+    <!-- Gruvbox -->
+    <style name="AppThemeGruvbox" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/gruvbox_bg</item>
+        <item name="android:textColor">@color/gruvbox_fg</item>
+        <item name="bluelineconsoleAccentColor">@color/gruvbox_accent</item>
+        <item name="bluelineconsoleBaseTextColor">@color/gruvbox_fg</item>
+        <item name="bluelineconsoleFrameColor">@color/gruvbox_command_bg</item>
+        <item name="bluelineconsoleFrameTextColor">@color/gruvbox_fg</item>
+        <item name="bluelineconsoleSelectedItemBackgroundColor">@color/gruvbox_selected</item>
+        <item name="bluelineconsoleBackgroundColorOfCommand">@color/gruvbox_command_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppThemeGruvboxHome" parent="AppThemeGruvbox">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+
+    <!-- Rose Pine -->
+    <style name="AppThemeRosePine" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/rosepine_bg</item>
+        <item name="android:textColor">@color/rosepine_fg</item>
+        <item name="bluelineconsoleAccentColor">@color/rosepine_accent</item>
+        <item name="bluelineconsoleBaseTextColor">@color/rosepine_fg</item>
+        <item name="bluelineconsoleFrameColor">@color/rosepine_command_bg</item>
+        <item name="bluelineconsoleFrameTextColor">@color/rosepine_fg</item>
+        <item name="bluelineconsoleSelectedItemBackgroundColor">@color/rosepine_selected</item>
+        <item name="bluelineconsoleBackgroundColorOfCommand">@color/rosepine_command_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AppThemeRosePineHome" parent="AppThemeRosePine">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+
+    <!-- dmenu -->
+    <style name="AppThemeDmenu" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:colorBackground">@color/dmenu_bg</item>
+        <item name="android:textColor">@color/dmenu_fg</item>
+        <item name="bluelineconsoleAccentColor">@color/dmenu_accent</item>
+        <item name="bluelineconsoleBaseTextColor">@color/dmenu_fg</item>
+        <item name="bluelineconsoleFrameColor">@color/dmenu_bg</item>
+        <item name="bluelineconsoleFrameTextColor">@color/dmenu_fg</item>
+        <item name="bluelineconsoleSelectedItemBackgroundColor">@color/dmenu_selected</item>
+        <item name="bluelineconsoleBackgroundColorOfCommand">@color/dmenu_bg</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AppThemeDmenuHome" parent="AppThemeDmenu">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+</resources>

@@ -73,8 +73,9 @@
                 <TextView
                     android:clickable="false"
                     android:id="@+id/baseWindowMainHeaderTextView"
-                    android:layout_width="130sp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingHorizontal="8sp"
                     android:gravity="center_horizontal|top"
                     android:textColor="?bluelineconsoleFrameTextColor"
                     android:textStyle="bold"
@@ -193,8 +194,9 @@
                 <TextView
                     android:clickable="false"
                     android:id="@+id/baseWindowMainFooterTextView"
-                    android:layout_width="130sp"
-                    android:layout_height="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8sp"
                     android:paddingBottom="1sp"
                     android:gravity="center_horizontal|bottom"
                     android:textStyle="bold"

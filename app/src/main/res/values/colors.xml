@@ -16,4 +16,25 @@
     <color name="baseBackgroundDark">#000000</color>
     <color name="selectedItemBackgroundDark">#666666</color>
     <color name="disabledTextDark">#808080</color>
+
+    <!-- Gruvbox -->
+    <color name="gruvbox_bg">#282828</color>
+    <color name="gruvbox_fg">#ebdbb2</color>
+    <color name="gruvbox_accent">#fabd2f</color>
+    <color name="gruvbox_selected">#3c3836</color>
+    <color name="gruvbox_command_bg">#32302f</color>
+
+    <!-- Rose Pine -->
+    <color name="rosepine_bg">#191724</color>
+    <color name="rosepine_fg">#e0def4</color>
+    <color name="rosepine_accent">#eb6f92</color>
+    <color name="rosepine_selected">#26233a</color>
+    <color name="rosepine_command_bg">#1f1d2e</color>
+
+    <!-- dmenu -->
+    <color name="dmenu_bg">#222222</color>
+    <color name="dmenu_fg">#bbbbbb</color>
+    <color name="dmenu_accent">#005577</color>
+    <color name="dmenu_selected">#005577</color>
+    <color name="dmenu_selected_fg">#eeeeee</color>
 </resources>

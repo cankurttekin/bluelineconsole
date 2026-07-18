@@ -6,6 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
@@ -72,8 +73,11 @@ public class MainActivity extends BaseWindowActivity {
         this.migrationLostHappened = WidgetsSetting.migrationLostHappened(this);
         this.showStartUpHelp = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(StartUpHelpActivity.PREF_KEY_SHOW_STARTUP_HELP, true);
 
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean showHeader = prefs.getBoolean("pref_appearance_show_header", true);
+        String headerText = showHeader ? prefs.getString("pref_appearance_header_text", getString(R.string.app_name)) : "";
 
-        this.setHeaderFooterTexts(getString(R.string.app_name), String.format(getString(R.string.displayedFullVersionString), BuildConfig.VERSION_NAME));
+        this.setHeaderFooterTexts(headerText, "");
 
         AppNotification.update(this);
 

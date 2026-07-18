@@ -70,11 +70,44 @@ public abstract class BaseTheme implements AppTheme {
     @Override
     @SuppressLint("SetTextI18n")
     public void setHeaderFooterTexts(BaseWindowActivity activity, CharSequence headerText, CharSequence footerText) {
+        boolean hasHeader = headerText != null && headerText.length() > 0;
+        boolean hasFooterText = footerText != null && footerText.length() > 0;
+
+        View headerWrapper = activity.findViewById(R.id.baseWindowHeaderWrapper);
+        if (headerWrapper != null) {
+            headerWrapper.setVisibility(hasHeader ? View.VISIBLE : View.GONE);
+        }
+
+        View footerWrapper = activity.findViewById(R.id.baseWindowFooterWrapper);
+        if (footerWrapper != null) {
+            footerWrapper.setVisibility(hasFooterText ? View.VISIBLE : View.GONE);
+        }
+
         if (this.hasFooter()) {
-            ((TextView) activity.findViewById(R.id.baseWindowMainHeaderTextView)).setText(headerText);
-            ((TextView) activity.findViewById(R.id.baseWindowMainFooterTextView)).setText(footerText == null ? headerText : footerText);
+            TextView headerView = activity.findViewById(R.id.baseWindowMainHeaderTextView);
+            if (headerView != null) {
+                headerView.setVisibility(hasHeader ? View.VISIBLE : View.GONE);
+                headerView.setText(headerText);
+            }
+
+            TextView footerView = activity.findViewById(R.id.baseWindowMainFooterTextView);
+            if (footerView != null) {
+                footerView.setVisibility(hasFooterText ? View.VISIBLE : View.GONE);
+                footerView.setText(footerText == null ? headerText : footerText);
+            }
         } else {
-            ((TextView) activity.findViewById(R.id.baseWindowMainHeaderTextView)).setText(footerText == null ? headerText : (headerText + " " + footerText));
+            TextView headerView = activity.findViewById(R.id.baseWindowMainHeaderTextView);
+            if (headerView != null) {
+                headerView.setVisibility((hasHeader || hasFooterText) ? View.VISIBLE : View.GONE);
+
+                if (hasHeader && hasFooterText) {
+                    headerView.setText(headerText + " " + footerText);
+                } else if (hasHeader) {
+                    headerView.setText(headerText);
+                } else if (hasFooterText) {
+                    headerView.setText(footerText);
+                }
+            }
         }
     }
 

@@ -27,6 +27,9 @@
     <string name="theme_name_dark">ダーク</string>
     <string name="theme_name_marine">マリン</string>
     <string name="theme_name_old_computer">オールド・コンピュータ</string>
+    <string name="theme_name_gruvbox">Gruvbox</string>
+    <string name="theme_name_rosepine">Rose Pine</string>
+    <string name="theme_name_dmenu">dmenu</string>
 
     <!-- Widgets -->
     <string name="widget_launcher_label">Blue Line Console のショートカット</string>
@@ -91,6 +94,9 @@
     <string name="preferences_item_main_always_show_notification_summary">どこからでも Blue Line Console を起動できるよう、通知を常に表示します。</string>
     <string name="preferences_item_text_match_strategy_title">検索時の文字列マッチ</string>
     <string name="preferences_item_appearance_theme_title">テーマ</string>
+    <string name="preferences_item_appearance_show_header_title">ヘッダーテキストを表示</string>
+    <string name="preferences_item_appearance_header_text_title">ヘッダーテキスト</string>
+    <string name="preferences_item_appearance_placeholder_text_title">入力欄のプレースホルダ</string>
     <string name="preferences_item_appearance_theme_summary">テーマを変更すると、 Blue Line Console が再起動します。</string>
     <string name="preferences_item_appearance_accent_color">アクセント カラー</string>
     <string name="preferences_item_appearance_animation_title">アニメーション</string>
@@ -164,7 +170,7 @@
     <string name="menu_item_rename">名前変更</string>
     <string name="menu_item_hide">非表示</string>
     <string name="menu_item_unhide">再表示</string>
-    <string name="menu_item_delete">削除（アンインストール）</string>
+    <string name="menu_item_uninstall">アンインストール</string>
     <string name="dialog_title_rename_format">%1$s の名前変更</string>
 
     <!-- Error messages, user errors -->

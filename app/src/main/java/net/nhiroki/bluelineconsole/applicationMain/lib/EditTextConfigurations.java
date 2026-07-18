@@ -14,9 +14,12 @@ import java.util.Locale;
 public class EditTextConfigurations {
     public static final String PREF_KEY_MAIN_EDITTEXT_FLAG_FORCE_ASCII = "pref_mainedittext_flagforceascii";
     public static final String PREF_KEY_MAIN_EDITTEXT_HINT_LOCALE_ENGLISH = "pref_mainedittext_hint_locale_english";
+    public static final String PREF_KEY_MAIN_EDITTEXT_PLACEHOLDER = "pref_mainedittext_placeholder";
 
 
     public static void applyCommandEditTextConfigurations(EditText editText, Context context) {
+        editText.setHint(PreferenceManager.getDefaultSharedPreferences(context).getString(PREF_KEY_MAIN_EDITTEXT_PLACEHOLDER, ""));
+
         if (PreferenceManager.getDefaultSharedPreferences(context).getBoolean(PREF_KEY_MAIN_EDITTEXT_FLAG_FORCE_ASCII, false)) {
             editText.setImeOptions(editText.getImeOptions() | IME_FLAG_FORCE_ASCII);
         } else {
