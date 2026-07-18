@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:textSize="16sp"
             android:textStyle="bold"
             android:text="@string/licensing_notice_header"
@@ -21,13 +21,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:text="@string/licensing_notice_body"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:textSize="16sp"
             android:textStyle="bold"
             android:paddingTop="20sp"
@@ -37,7 +37,7 @@
             android:id="@+id/licensing_information_apache_license_v2_0_full_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:fontFamily="monospace"
             android:layout_marginHorizontal="10sp"
             android:layout_marginVertical="3sp"

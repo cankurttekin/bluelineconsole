@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Blue Line Console</string>
-    <string name="preferences_item_about_this_app_github_repo">Blue Line Console on GitHub</string>
-    <string name="preferences_item_about_this_app_github_repo_summary">https://github.com/nhirokinet/bluelineconsole 에 접근</string>
+    <string name="app_name">andmenu</string>
+    <string name="preferences_item_about_this_app_github_repo">andmenu on GitHub</string>
+    <string name="preferences_item_about_this_app_github_repo_summary">https://github.com/nhirokinet/andmenu 에 접근</string>
 
     <!-- ActivityMain -->
     <string name="displayedFullVersionString">Version %1$s</string>
@@ -19,7 +19,7 @@
     <!-- Command searcher texts for results -->
     <string name="result_search_query_on_engine_format">%2$s (으)로 \"%1$s\"을(를) 검색</string>
     <string name="result_static_webpage_format">%1$s을(를) 접근</string>
-    <string name="result_config_summary">Blue Line Console 설정</string>
+    <string name="result_config_summary">andmenu 설정</string>
 
     <!-- Themes -->
     <string name="theme_name_default">디폴트 (라이트나 다크, 시스템 설정 기준)</string>
@@ -29,15 +29,15 @@
     <string name="theme_name_old_computer">Old Computer</string>
 
     <!-- Widgets -->
-    <string name="widget_launcher_label">Blue Line Console 바로가기</string>
+    <string name="widget_launcher_label">andmenu 바로가기</string>
 
     <!-- String match strategies -->
     <string name="string_match_strategy_substring">보통</string>
     <string name="string_match_strategy_skipped_substring">부분 일치 (예: \"abcdef\"이 \"abd\"를 포함)</string>
 
     <!-- Notification for OS -->
-    <string name="notification_launch_this_app">Blue Line Console을 기동</string>
-    <string name="notification_channel_always_show">Blue Line Console을 모든 화면에서 열기 위해 알림을 상시 표시</string>
+    <string name="notification_launch_this_app">andmenu을 기동</string>
+    <string name="notification_channel_always_show">andmenu을 모든 화면에서 열기 위해 알림을 상시 표시</string>
 
     <!-- Preferences general buttons -->
     <string name="button_add">추가</string>
@@ -54,7 +54,7 @@
     <string name="rgb_color_display">RGB (빨강:%1$d, 초록:%2$d, 파랑:%3$d)</string>
 
     <!-- Preferences general notes -->
-    <string name="note_take_effect_after_restart">Blue Line Console 재시작 후 반영됨</string>
+    <string name="note_take_effect_after_restart">andmenu 재시작 후 반영됨</string>
 
     <!-- Preferences, titles for headers and footers -->
     <string name="preferences_title_for_header_and_footer">Configuration</string>
@@ -78,18 +78,18 @@
     <string name="preferences_category_home_screen">홈 화면</string>
     <string name="preferences_category_contacts">주소록</string>
     <string name="preferences_category_advanced">고급 옵션</string>
-    <string name="preferences_category_about_this_app">Blue Line Console</string>
+    <string name="preferences_category_about_this_app">andmenu</string>
 
     <!-- Preferences, titles for headers and footers -->
     <string name="preferences_item_main_show_startup_help_title">기동 시 help를 표시</string>
     <string name="preferences_item_main_show_startup_help_summary">"help" 명령어를 안내합니다. "help"명령어를 기억하셨면 비활성화를 권장합니다.</string>
     <string name="preferences_item_default_assist_app_title">디지털 어시스턴트 앱으로 설정</string>
-    <string name="preferences_item_default_assist_app_summary">Android 설정에서 디지털 어시스턴트 앱으로 설정하면, 모든 화면에서 하위우측 스와이프나 홈 버튼 롱 클릭으로 Blue Line Console을 기동 할 수 있습니다.</string>
+    <string name="preferences_item_default_assist_app_summary">Android 설정에서 디지털 어시스턴트 앱으로 설정하면, 모든 화면에서 하위우측 스와이프나 홈 버튼 롱 클릭으로 andmenu을 기동 할 수 있습니다.</string>
     <string name="preferences_item_main_always_show_notification_title">상시 알림 표시</string>
-    <string name="preferences_item_main_always_show_notification_summary">모든 화면에서 Blue Line Console을 기동하기 위해 알림을 상시 표시합니다.</string>
+    <string name="preferences_item_main_always_show_notification_summary">모든 화면에서 andmenu을 기동하기 위해 알림을 상시 표시합니다.</string>
     <string name="preferences_item_text_match_strategy_title">문자열 매칭 방법</string>
     <string name="preferences_item_appearance_theme_title">테마</string>
-    <string name="preferences_item_appearance_theme_summary">테마를 변경하면, Blue Line Console이 재시작합니다.</string>
+    <string name="preferences_item_appearance_theme_summary">테마를 변경하면, andmenu이 재시작합니다.</string>
     <string name="preferences_item_appearance_accent_color">악센트 컬러</string>
     <string name="preferences_item_appearance_animation_title">애니메이션</string>
     <string name="preferences_item_appearance_show_icons_title">아이콘을 표시함</string>
@@ -109,7 +109,7 @@
     <string name="preferences_item_advanced_main_edittext_flagforceascii_title">명령어 입력창의 IME_FLAG_FORCE_ASCII 를 활성화</string>
     <string name="preferences_item_advanced_main_edittext_flagforceascii_summary">IME_FLAG_FORCE_ASCII는 ASCII문자 입력을 IME 에 지시하는 옵션입니다만, IME에 따라 동작이 다릅니다.</string>
     <string name="preferences_item_accept_arbitrary_url">URL입력에 임의의 scheme를 허용 </string>
-    <string name="preferences_item_accept_arbitrary_url_summary">디폴트라면 Blue Line Console은 http:// 와 https:// 의 scheme 만을 URL 로 인식합니다. 이 옵션이 유효라면, 다른 schema도 입력 가능합니다.</string>
+    <string name="preferences_item_accept_arbitrary_url_summary">디폴트라면 andmenu은 http:// 와 https:// 의 scheme 만을 URL 로 인식합니다. 이 옵션이 유효라면, 다른 schema도 입력 가능합니다.</string>
     <string name="preferences_item_about_this_app_licensing_information">라이선스 정보</string>
 
     <!-- Preferences items, URL screens -->
@@ -182,7 +182,7 @@
 
     <!-- Migration message -->
     <string name="migration_lost_happened_message">
-        Blue Line Console 외부에서 데이터 복구가 실시된 것 같습니다.
+        andmenu 외부에서 데이터 복구가 실시된 것 같습니다.
         \n
         \n위젯 관련 설정이 손실되었을 가능성이 있습니다. 필요하면 config 명령어로 다시 설정하십시오.
     </string>
@@ -191,8 +191,8 @@
     <string name="app_help_text">
         아래와 같이 검색하실 수 있습니다.
         \n
-        \n-&#032;앱 이름(예: Blue Line Console)의 일부
-        \n-&#032;Package name (예: net.nhiroki.bluelineconsole)의 일부
+        \n-&#032;앱 이름(예: andmenu)의 일부
+        \n-&#032;Package name (예: net.nhiroki.andmenu)의 일부
         \n-&#032;URL (예: https://example.com/)
         \n-&#032;계산식 (예: 2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm)
         \n-&#032;아래 명령어 (예: help)
@@ -221,7 +221,7 @@
         \n
         \n-&#032;컬러 코드(예: #4d68ff)
         \n
-        \n힌트: 설정 &gt; 앱 &gt; 기본 앱 &gt; 디지털 어시스턴스 앱, 이나 같은 메뉴에서 Blue Line Console을 디지털 어시스턴트 앱으로 설정하면, 모든 화면에서 하위우측 스와이프나 홈 버튼 롱 클릭으로 Blue Line Console을 기동 할 수 있습니다.
-        \n힌트: Blue Line Console 아이콘을 상시 알림으로 표시할 설정이 config 명령의 메뉴에서 가능합니다.
+        \n힌트: 설정 &gt; 앱 &gt; 기본 앱 &gt; 디지털 어시스턴스 앱, 이나 같은 메뉴에서 andmenu을 디지털 어시스턴트 앱으로 설정하면, 모든 화면에서 하위우측 스와이프나 홈 버튼 롱 클릭으로 andmenu을 기동 할 수 있습니다.
+        \n힌트: andmenu 아이콘을 상시 알림으로 표시할 설정이 config 명령의 메뉴에서 가능합니다.
     </string>
 </resources>

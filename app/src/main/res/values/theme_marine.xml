@@ -25,10 +25,10 @@
         <item name="android:textColor">@color/MarineTextColorSecond</item>
         <item name="android:textColorPrimary">@color/baseTextMarine</item>
         <item name="android:textColorSecondary">@color/MarineTextColorSecond</item>
-        <item name="bluelineconsoleFrameColor">@color/MarineTopColor</item>
-        <item name="bluelineconsoleFrameTextColor">@color/textOnFrameMarine</item>
-        <item name="bluelineconsoleBaseTextColor">@color/baseTextMarine</item>
-        <item name="bluelineconsoleDisabledTextColor">@color/disabledText</item>
-        <item name="bluelineconsoleSelectedItemBackgroundColor">@color/selectedItemBackgroundMarine</item>
+        <item name="andmenuFrameColor">@color/MarineTopColor</item>
+        <item name="andmenuFrameTextColor">@color/textOnFrameMarine</item>
+        <item name="andmenuBaseTextColor">@color/baseTextMarine</item>
+        <item name="andmenuDisabledTextColor">@color/disabledText</item>
+        <item name="andmenuSelectedItemBackgroundColor">@color/selectedItemBackgroundMarine</item>
     </style>
 </resources>

@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:padding="3sp"
         android:text="@string/preferences_home_screen_add_widget_select_message"
-        android:textColor="?bluelineconsoleBaseTextColor"
-        android:background="?bluelineconsoleFrameColor"
+        android:textColor="?andmenuBaseTextColor"
+        android:background="?andmenuFrameColor"
         android:focusable="false"
         android:focusableInTouchMode="false"
         />

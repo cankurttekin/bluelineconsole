@@ -23,7 +23,7 @@
             android:padding="3sp"
             android:clickable="false"
             android:focusable="false"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:textStyle="bold"
             />
         <Space

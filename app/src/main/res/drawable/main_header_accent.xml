@@ -5,7 +5,7 @@
     android:viewportHeight="3"
     android:viewportWidth="130"
     android:autoMirrored="true"
-    android:tint="?bluelineconsoleAccentColor"
+    android:tint="?andmenuAccentColor"
     >
     <path
         android:pathData="M0,3 L121.341667,3 L119.61,0 L0,0"

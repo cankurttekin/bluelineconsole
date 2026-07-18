@@ -1,0 +1,34 @@
+<resources>
+    <color name="andmenuTextOnFrame">#000000</color>
+    <color name="andmenuTextOnFrameDark">#ffffff</color>
+    <color name="andmenuColorFrame">#dddddd</color>
+    <color name="andmenuColorFrameDark">#444444</color>
+
+    <style name="AppThemeAndmenu" parent="BaseAppThemeLight">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="andmenuFrameColor">@color/andmenuColorFrame</item>
+        <item name="andmenuFrameTextColor">@color/andmenuTextOnFrame</item>
+    </style>
+
+    <style name="AppThemeAndmenuHome" parent="AppThemeAndmenu">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+
+    <style name="AppThemeAndmenuDark" parent="BaseAppThemeDark">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="andmenuFrameColor">@color/andmenuColorFrameDark</item>
+        <item name="andmenuFrameTextColor">@color/andmenuTextOnFrameDark</item>
+    </style>
+
+    <style name="AppThemeAndmenuDarkHome" parent="AppThemeAndmenuDark">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+</resources>

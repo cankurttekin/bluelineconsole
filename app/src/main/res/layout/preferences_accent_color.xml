@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/preferences_item_appearance_accent_color"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:textSize="15sp"
             android:paddingBottom="10dp"
             />
@@ -56,7 +56,7 @@
                 android:textSize="20sp"
                 android:textAlignment="center"
                 android:fontFamily="monospace"
-                android:background="?bluelineconsoleAccentColor"
+                android:background="?andmenuAccentColor"
                 />
         </LinearLayout>
         <TableLayout
@@ -97,7 +97,7 @@
                     android:paddingHorizontal="3sp"
                     android:textAlignment="textEnd"
                     android:textDirection="ltr"
-                    android:textColor="?bluelineconsoleBaseTextColor"
+                    android:textColor="?andmenuBaseTextColor"
                     android:fontFamily="monospace"
                     />
                 <Button
@@ -142,7 +142,7 @@
                     android:paddingHorizontal="3sp"
                     android:textAlignment="textEnd"
                     android:textDirection="ltr"
-                    android:textColor="?bluelineconsoleBaseTextColor"
+                    android:textColor="?andmenuBaseTextColor"
                     android:fontFamily="monospace"
                     />
                 <Button
@@ -187,7 +187,7 @@
                     android:paddingHorizontal="3sp"
                     android:textAlignment="textEnd"
                     android:textDirection="ltr"
-                    android:textColor="?bluelineconsoleBaseTextColor"
+                    android:textColor="?andmenuBaseTextColor"
                     android:fontFamily="monospace"
                     />
                 <Button

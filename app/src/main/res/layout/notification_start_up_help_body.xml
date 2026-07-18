@@ -25,7 +25,7 @@
             android:textStyle="bold"
             android:layout_gravity="start"
             android:text="@string/startup_help_title"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:textSize="12sp"
             />
         <TextView
@@ -34,7 +34,7 @@
             android:paddingVertical="6sp"
             android:layout_gravity="start"
             android:text="@string/startup_help_body_part1"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             />
         <TextView
             android:id="@+id/startUpHelpingCommandTextView"
@@ -43,8 +43,8 @@
             android:layout_margin="6sp"
             android:padding="3sp"
             android:layout_gravity="start"
-            android:background="?bluelineconsoleBackgroundColorOfCommand"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:background="?andmenuBackgroundColorOfCommand"
+            android:textColor="?andmenuBaseTextColor"
             android:typeface="monospace"
             android:text="@string/startup_help_body_part2"
             />
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:paddingVertical="6sp"
             android:layout_gravity="start"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:text="@string/startup_help_body_part3"
             />
         <CheckBox

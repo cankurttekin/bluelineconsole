@@ -25,7 +25,7 @@
             android:paddingBottom="2dp"
             android:clickable="false"
             android:focusable="false"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:textStyle="bold"
             />
         <Space
@@ -41,7 +41,7 @@
             android:paddingBottom="2dp"
             android:clickable="false"
             android:focusable="false"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:textStyle="italic"
             android:text="@string/preferences_url_property_disabled"
             android:visibility="gone"
@@ -67,7 +67,7 @@
             android:paddingBottom="2dp"
             android:clickable="false"
             android:focusable="false"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             />
         <Space
             android:layout_width="0dp"
@@ -82,7 +82,7 @@
             android:paddingBottom="2dp"
             android:clickable="false"
             android:focusable="false"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             android:textStyle="italic"
             android:text="@string/preferences_url_property_preset"
             android:visibility="gone"

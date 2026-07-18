@@ -25,7 +25,7 @@
             android:paddingVertical="6sp"
             android:layout_gravity="start"
             android:text="@string/migration_lost_happened_message"
-            android:textColor="?bluelineconsoleBaseTextColor"
+            android:textColor="?andmenuBaseTextColor"
             />
         <Button
             android:layout_width="match_parent"

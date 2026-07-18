@@ -7,9 +7,9 @@ android {
     useLibrary 'android.test.base'
     useLibrary 'android.test.mock'
 
-    namespace 'net.nhiroki.bluelineconsole'
+    namespace 'net.nhiroki.andmenu'
     defaultConfig {
-        applicationId "net.nhiroki.bluelineconsole"
+        applicationId "net.nhiroki.andmenu"
         versionCode 44
         versionName "1.2.25"
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Blue Line Console</string>
-    <string name="preferences_item_about_this_app_github_repo">Blue Line Console on GitHub</string>
-    <string name="preferences_item_about_this_app_github_repo_summary">https://github.com/nhirokinet/bluelineconsole に接続</string>
+    <string name="app_name">andmenu</string>
+    <string name="preferences_item_about_this_app_github_repo">andmenu on GitHub</string>
+    <string name="preferences_item_about_this_app_github_repo_summary">https://github.com/nhirokinet/andmenu に接続</string>
 
     <!-- ActivityMain -->
     <string name="displayedFullVersionString">Version %1$s</string>
@@ -19,7 +19,7 @@
     <!-- Command searcher texts for results -->
     <string name="result_search_query_on_engine_format">%2$s で \"%1$s\" を検索</string>
     <string name="result_static_webpage_format">%1$s に接続</string>
-    <string name="result_config_summary">Blue Line Console の設定</string>
+    <string name="result_config_summary">andmenu の設定</string>
 
     <!-- Themes -->
     <string name="theme_name_default">デフォルト（ライトまたはダーク、システム設定に従う）</string>
@@ -32,15 +32,15 @@
     <string name="theme_name_dmenu">dmenu</string>
 
     <!-- Widgets -->
-    <string name="widget_launcher_label">Blue Line Console のショートカット</string>
+    <string name="widget_launcher_label">andmenu のショートカット</string>
 
     <!-- String match strategies -->
     <string name="string_match_strategy_substring">通常</string>
     <string name="string_match_strategy_skipped_substring">一部一致 （例： \"abd\" で \"abcdef\" がヒット）</string>
 
     <!-- Notification for OS -->
-    <string name="notification_launch_this_app">Blue Line Console を起動</string>
-    <string name="notification_channel_always_show">Blue Line Console をどの画面からでも開くために、常に通知バーに表示</string>
+    <string name="notification_launch_this_app">andmenu を起動</string>
+    <string name="notification_channel_always_show">andmenu をどの画面からでも開くために、常に通知バーに表示</string>
 
     <!-- Preferences general buttons -->
     <string name="button_add">追加</string>
@@ -59,7 +59,7 @@
     <string name="rgb_color_display">RGB (赤:%1$d, 緑:%2$d, 青:%3$d)</string>
 
     <!-- Preferences general notes -->
-    <string name="note_take_effect_after_restart">Blue Line Console の再起動後に反映されます。</string>
+    <string name="note_take_effect_after_restart">andmenu の再起動後に反映されます。</string>
 
     <!-- Preferences, titles for headers and footers -->
     <string name="preferences_title_for_header_and_footer">Configuration</string>
@@ -83,23 +83,23 @@
     <string name="preferences_category_home_screen">ホームスクリーン</string>
     <string name="preferences_category_contacts">連絡先</string>
     <string name="preferences_category_advanced">上級者向けオプション</string>
-    <string name="preferences_category_about_this_app">Blue Line Console について</string>
+    <string name="preferences_category_about_this_app">andmenu について</string>
 
     <!-- Preferences, titles for headers and footers -->
     <string name="preferences_item_main_show_startup_help_title">起動時にヘルプを表示</string>
     <string name="preferences_item_main_show_startup_help_summary">"help" コマンドを案内します。"help" コマンドを覚えたら無効にすることをおすすめします。</string>
     <string name="preferences_item_default_assist_app_title">デフォルトのアシストアプリに設定する</string>
-    <string name="preferences_item_default_assist_app_summary">設定でアシストアプリに設定することで、どこからでもホームボタン長押しで Blue Line Console を起動できるようにできます。</string>
+    <string name="preferences_item_default_assist_app_summary">設定でアシストアプリに設定することで、どこからでもホームボタン長押しで andmenu を起動できるようにできます。</string>
     <string name="preferences_item_default_home_app_title">デフォルトのホームアプリに設定する</string>
-    <string name="preferences_item_default_home_app_summary">Blue Line Console をホーム画面として使用するには、設定メニューからデフォルトのホームアプリに設定してください。</string>
+    <string name="preferences_item_default_home_app_summary">andmenu をホーム画面として使用するには、設定メニューからデフォルトのホームアプリに設定してください。</string>
     <string name="preferences_item_main_always_show_notification_title">通知を常に表示</string>
-    <string name="preferences_item_main_always_show_notification_summary">どこからでも Blue Line Console を起動できるよう、通知を常に表示します。</string>
+    <string name="preferences_item_main_always_show_notification_summary">どこからでも andmenu を起動できるよう、通知を常に表示します。</string>
     <string name="preferences_item_text_match_strategy_title">検索時の文字列マッチ</string>
     <string name="preferences_item_appearance_theme_title">テーマ</string>
     <string name="preferences_item_appearance_show_header_title">ヘッダーテキストを表示</string>
     <string name="preferences_item_appearance_header_text_title">ヘッダーテキスト</string>
     <string name="preferences_item_appearance_placeholder_text_title">入力欄のプレースホルダ</string>
-    <string name="preferences_item_appearance_theme_summary">テーマを変更すると、 Blue Line Console が再起動します。</string>
+    <string name="preferences_item_appearance_theme_summary">テーマを変更すると、 andmenu が再起動します。</string>
     <string name="preferences_item_appearance_accent_color">アクセント カラー</string>
     <string name="preferences_item_appearance_animation_title">アニメーション</string>
     <string name="preferences_item_appearance_show_icons_title">アイコンを表示</string>
@@ -121,7 +121,7 @@
     <string name="preferences_item_advanced_main_edittext_flagforceascii_title">コマンド入力窓で IME_FLAG_FORCE_ASCII を有効にする</string>
     <string name="preferences_item_advanced_main_edittext_flagforceascii_summary">IME_FLAG_FORCE_ASCII は ASCII 文字（英数、記号）入力を IME に指示するものですがキーボード入力ソフトにより挙動が異なります。</string>
     <string name="preferences_item_accept_arbitrary_url">URL 入力で任意の scheme を許可</string>
-    <string name="preferences_item_accept_arbitrary_url_summary">デフォルトでは、 Blue Line Console は http:// と https:// の scheme のみを URL として受け付けます。このオプションを有効にすると、他の scheme も入力できるようになります。</string>
+    <string name="preferences_item_accept_arbitrary_url_summary">デフォルトでは、 andmenu は http:// と https:// の scheme のみを URL として受け付けます。このオプションを有効にすると、他の scheme も入力できるようになります。</string>
     <string name="preferences_item_about_this_app_licensing_information">ライセンス情報</string>
 
     <!-- Preferences items, URL screens -->
@@ -202,7 +202,7 @@
 
     <!-- Migration message -->
     <string name="migration_lost_happened_message">
-        Blue Line Console の外側でデータの復元が行われたようです。
+        andmenu の外側でデータの復元が行われたようです。
         \n
         \nウィジェットは移行できませんので、設定が失われています。必要なら config から再度ウィジェット設定を行ってください。
     </string>
@@ -211,8 +211,8 @@
     <string name="app_help_text">
         次の一覧のいずれかで検索できます。
         \n
-        \n-&#032;アプリケーション名（例： Blue Line Console）の一部
-        \n-&#032;パッケージ名（例： net.nhiroki.bluelineconsole）の一部
+        \n-&#032;アプリケーション名（例： andmenu）の一部
+        \n-&#032;パッケージ名（例： net.nhiroki.andmenu）の一部
         \n-&#032;URL （例： https://example.com/）
         \n-&#032;計算式（例： 2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm）
         \n-&#032;下記のコマンド一覧のいずれか（例： help）
@@ -242,7 +242,7 @@
         \n
         \n-&#032;カラーコード（例： #4d68ff）
         \n
-        \nヒント： 設定 &gt; アプリと通知 &gt; デフォルトアプリ &gt; アシスト&amp;音声入力、または似たようなメニューで Blue Line Console をデフォルトのアシストアプリにすることにより、ホームボタン長押しで Blue Line Console を起動できるようになります。
-        \nヒント： Blue Line Console のアイコンを常に通知に表示することで、通知バーから開くことができます。config コマンドでメニューを開いて設定できます。
+        \nヒント： 設定 &gt; アプリと通知 &gt; デフォルトアプリ &gt; アシスト&amp;音声入力、または似たようなメニューで andmenu をデフォルトのアシストアプリにすることにより、ホームボタン長押しで andmenu を起動できるようになります。
+        \nヒント： andmenu のアイコンを常に通知に表示することで、通知バーから開くことができます。config コマンドでメニューを開いて設定できます。
     </string>
 </resources>

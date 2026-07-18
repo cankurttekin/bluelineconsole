@@ -76,8 +76,8 @@
             app:iconSpaceReserved="false"
             >
             <intent
-                android:targetClass="net.nhiroki.bluelineconsole.applicationMain.PreferencesAccentColorActivity"
-                android:targetPackage="net.nhiroki.bluelineconsole"
+                android:targetClass="net.nhiroki.andmenu.applicationMain.PreferencesAccentColorActivity"
+                android:targetPackage="net.nhiroki.andmenu"
                 />
         </Preference>
         <SwitchPreference
@@ -114,8 +114,8 @@
             app:iconSpaceReserved="false"
             >
             <intent
-                android:targetClass="net.nhiroki.bluelineconsole.applicationMain.PreferencesCustomWebActivity"
-                android:targetPackage="net.nhiroki.bluelineconsole"
+                android:targetClass="net.nhiroki.andmenu.applicationMain.PreferencesCustomWebActivity"
+                android:targetPackage="net.nhiroki.andmenu"
                 />
         </Preference>
         <ListPreference
@@ -135,8 +135,8 @@
             app:iconSpaceReserved="false"
             >
             <intent
-                android:targetClass="net.nhiroki.bluelineconsole.applicationMain.PreferencesWidgetCommandsActivity"
-                android:targetPackage="net.nhiroki.bluelineconsole"
+                android:targetClass="net.nhiroki.andmenu.applicationMain.PreferencesWidgetCommandsActivity"
+                android:targetPackage="net.nhiroki.andmenu"
                 />
         </Preference>
     </PreferenceCategory>
@@ -160,8 +160,8 @@
             app:iconSpaceReserved="false"
             >
             <intent
-                android:targetClass="net.nhiroki.bluelineconsole.applicationMain.PreferencesHomeScreenItemsActivity"
-                android:targetPackage="net.nhiroki.bluelineconsole"
+                android:targetClass="net.nhiroki.andmenu.applicationMain.PreferencesHomeScreenItemsActivity"
+                android:targetPackage="net.nhiroki.andmenu"
                 />
         </Preference>
     </PreferenceCategory>
@@ -228,8 +228,8 @@
             app:iconSpaceReserved="false"
             >
             <intent
-                android:targetClass="net.nhiroki.bluelineconsole.applicationMain.LicensingInformationActivity"
-                android:targetPackage="net.nhiroki.bluelineconsole"
+                android:targetClass="net.nhiroki.andmenu.applicationMain.LicensingInformationActivity"
+                android:targetPackage="net.nhiroki.andmenu"
                 />
         </Preference>
     </PreferenceCategory>

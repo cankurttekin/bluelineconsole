@@ -3,10 +3,10 @@
     <color name="oldComputerDisabledColor">#008000</color>
 
     <style name="BaseAppThemeOldComputer" parent="BaseAppThemeDark">
-        <item name="bluelineconsoleAccentColor">@color/oldComputerForegroundColor</item>
-        <item name="bluelineconsoleFrameTextColor">@color/oldComputerForegroundColor</item>
-        <item name="bluelineconsoleBaseTextColor">@color/oldComputerForegroundColor</item>
-        <item name="bluelineconsoleDisabledTextColor">@color/oldComputerDisabledColor</item>
+        <item name="andmenuAccentColor">@color/oldComputerForegroundColor</item>
+        <item name="andmenuFrameTextColor">@color/oldComputerForegroundColor</item>
+        <item name="andmenuBaseTextColor">@color/oldComputerForegroundColor</item>
+        <item name="andmenuDisabledTextColor">@color/oldComputerDisabledColor</item>
         <item name="android:textColor">@color/oldComputerForegroundColor</item>
         <item name="android:textColorPrimary">@color/oldComputerForegroundColor</item>
         <item name="android:textColorSecondary">@color/oldComputerForegroundColor</item>

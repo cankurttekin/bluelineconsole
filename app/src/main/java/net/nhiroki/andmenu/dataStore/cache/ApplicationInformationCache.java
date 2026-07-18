@@ -1,0 +1,79 @@
+package net.nhiroki.andmenu.dataStore.cache;
+
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class ApplicationInformationCache extends SQLiteOpenHelper {
+    private static final String DATABASE_NAME = "application_information_cache.sqlite";
+    private static final int DATABASE_VERSION = 1;
+    private static final String[] columnsInDB = {"packagename", "locale", "version", "launchable", "label"};
+
+    public ApplicationInformationCache(Context context) {
+        super(context.getApplicationContext(), new File(context.getCacheDir(), DATABASE_NAME).toString(), null,  DATABASE_VERSION);
+    }
+
+    public static void destroyFilesForCleanTest(Context context) {
+        new File(context.getCacheDir(), DATABASE_NAME).delete();
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("CREATE TABLE appinfo ("+
+                   "  packagename TEXT NOT NULL PRIMARY KEY," +
+                   "  locale TEXT NOT NULL," +
+                   "  version INT NOT NULL," +
+                   "  launchable INT NOT NULL," +
+                   "  label TEXT NOT NULL" +
+                   ")"
+                  );
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // Nothing to do now because database structure have not been modified
+    }
+
+    @SuppressLint("Range")
+    public List<ApplicationInformation> getAllApplicationCaches() {
+        List<ApplicationInformation> ret = new ArrayList<>();
+
+        try (Cursor curApp = this.getReadableDatabase().query("appinfo", columnsInDB, null, null, null, null, null)) {
+            while (curApp.moveToNext()) {
+                ret.add(new ApplicationInformation(
+                        curApp.getString(curApp.getColumnIndex("packagename")),
+                        curApp.getString(curApp.getColumnIndex("locale")),
+                        curApp.getInt(curApp.getColumnIndex("version")),
+                        curApp.getString(curApp.getColumnIndex("label")),
+                        curApp.getInt(curApp.getColumnIndex("launchable")) != 0
+                ));
+            }
+        }
+
+        return ret;
+    }
+
+    public void updateCache (ApplicationInformation application) {
+        ContentValues cv = new ContentValues();
+        cv.put("packagename", application.getPackageName());
+        cv.put("locale", application.getLocale());
+        cv.put("version", application.getVersion());
+        cv.put("label", application.getLabel());
+        cv.put("launchable", application.getLaunchable() ? 1 : 0);
+
+        this.getWritableDatabase().replace("appinfo", null, cv);
+    }
+
+    public void deleteCache (String packageName) {
+        String[] sel = {packageName};
+        this.getWritableDatabase().delete("appinfo", "packagename = ?", sel);
+    }
+}

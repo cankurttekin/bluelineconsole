@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/preferences_url_property_enabled"
-            android:background="?bluelineconsoleFrameColor"
+            android:background="?andmenuFrameColor"
             android:padding="5dp"
             />
         <LinearLayout
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/preferences_url_varies_with_locale"
-                android:textColor="?bluelineconsoleBaseTextColor"
+                android:textColor="?andmenuBaseTextColor"
                 android:paddingBottom="10sp"
                 android:visibility="gone"
                 />

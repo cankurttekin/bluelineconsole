@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:background="?bluelineconsoleAccentColor"
+            android:background="?andmenuAccentColor"
             android:paddingVertical="2dp"
             android:paddingHorizontal="8dp"
             android:animateLayoutChanges="true"
@@ -39,7 +39,7 @@
                 android:id="@+id/baseWindowMainHeaderTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?bluelineconsoleFrameTextColor"
+                android:textColor="?andmenuFrameTextColor"
                 android:textStyle="bold"
                 android:textSize="14sp"
                 android:text=""
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:orientation="horizontal"
-            android:background="?bluelineconsoleAccentColor"
+            android:background="?andmenuAccentColor"
             android:animateLayoutChanges="true"
             />
     </LinearLayout>

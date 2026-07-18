@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="bluelineconsoleAccentColor" format="color" />
-    <attr name="bluelineconsoleFrameColor" format="color" />
-    <attr name="bluelineconsoleFrameTextColor" format="color" />
-    <attr name="bluelineconsoleBaseTextColor" format="color" />
-    <attr name="bluelineconsoleDisabledTextColor" format="color" />
-    <attr name="bluelineconsoleSelectedItemBackgroundColor" format="color" />
-    <attr name="bluelineconsoleBackgroundColorOfCommand" format="color" />
+    <attr name="andmenuAccentColor" format="color" />
+    <attr name="andmenuFrameColor" format="color" />
+    <attr name="andmenuFrameTextColor" format="color" />
+    <attr name="andmenuBaseTextColor" format="color" />
+    <attr name="andmenuDisabledTextColor" format="color" />
+    <attr name="andmenuSelectedItemBackgroundColor" format="color" />
+    <attr name="andmenuBackgroundColorOfCommand" format="color" />
 </resources>
