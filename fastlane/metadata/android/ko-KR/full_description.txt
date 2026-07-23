@@ -19,6 +19,7 @@ andmenu는 압도적인 속도와 효율성을 위해 설계된 가볍고 키보
 - ping6 호스트
 - all_apps
 - hidden_apps
+- sys [wifi, bluetooth, mobile_data, location, airplane_mode]
 - bing 검색어 (Bing 검색)
 - d 검색어 (DuckDuckGo)
 - google 검색어 (Google)

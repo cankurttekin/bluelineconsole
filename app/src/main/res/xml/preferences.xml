@@ -34,6 +34,13 @@
             android:defaultValue="false"
             app:iconSpaceReserved="false"
             />
+        <SwitchPreference
+            android:key="pref_main_run_mode"
+            android:title="@string/preferences_item_main_run_mode_title"
+            android:summary="@string/preferences_item_main_run_mode_summary"
+            android:defaultValue="false"
+            app:iconSpaceReserved="false"
+            />
         <ListPreference
             android:key="pref_text_match_strategy"
             android:title="@string/preferences_item_text_match_strategy_title"

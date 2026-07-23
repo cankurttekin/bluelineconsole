@@ -17,6 +17,7 @@ Commands:
 - ping6 HOST
 - all_apps
 - hidden_apps
+- sys [wifi, bluetooth, mobile_data, location, airplane_mode]
 - bing QUERY    (Bing search)
 - d QUERY       (DuckDuckGo)
 - google QUERY  (Google)

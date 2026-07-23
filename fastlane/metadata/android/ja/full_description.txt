@@ -7,21 +7,22 @@ andmenu は、圧倒的なスピードと効率性を追求して設計された
 
 利用可能なコマンド:
 
-    help
-    config
-    date
-    ping ホスト
-    ping6 ホスト
-    all_apps
-    hidden_apps
-    bing 検索ワード (Bing 検索)
-    d 検索ワード (DuckDuckGo)
-    google 検索ワード (Google)
-    ecosia 検索ワード (Ecosia)
-    maps 検索ワード (Google マップ)
-    ytm 検索ワード (YouTube Music)
-    yt 検索ワード (YouTube)
-    wikipedia 検索ワード
-    yahoo 検索ワード
+    - help
+    - config
+    - date
+    - ping ホスト
+    - ping6 ホスト
+    - all_apps
+    - hidden_apps
+    - sys [wifi, bluetooth, mobile_data, location, airplane_mode]
+    - bing 検索ワード (Bing 検索)
+    - d 検索ワード (DuckDuckGo)
+    - google 検索ワード (Google)
+    - ecosia 検索ワード (Ecosia)
+    - maps 検索ワード (Google マップ)
+    - ytm 検索ワード (YouTube Music)
+    - yt 検索ワード (YouTube)
+    - wikipedia 検索ワード
+    - yahoo 検索ワード
 
 ソースコード: https://github.com/cankurttekin/andmenu

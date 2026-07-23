@@ -98,6 +98,8 @@
     <string name="preferences_item_default_home_app_summary">To use andmenu as your home screen, set it as default home app from setting menu.</string>
     <string name="preferences_item_main_always_show_notification_title">Always show icon as notification</string>
     <string name="preferences_item_main_always_show_notification_summary">Always show the notification icon to start andmenu everywhere.</string>
+    <string name="preferences_item_main_run_mode_title">Run mode</string>
+    <string name="preferences_item_main_run_mode_summary">Quick access to settings panels (sys) like WiFi, Bluetooth, etc. from command line.</string>
     <string name="preferences_item_text_match_strategy_title">Text search matching style</string>
     <string name="preferences_item_appearance_theme_title">Theme</string>
     <string name="preferences_item_appearance_show_header_title">Show header text</string>
@@ -231,13 +233,18 @@
         \n-&#032;date
         \n-&#032;all_apps
         \n-&#032;hidden_apps
+        \n-&#032;sys &lt;wifi|bluetooth|mobile_data|location|airplane_mode&gt;
         \n-&#032;cal [&lt;month&gt; &lt;year&gt;]
         \n-&#032;factor &lt;number&gt; ...
         \n-&#032;bing &lt;query&gt;
-        \n-&#032;duckduckgo &lt;query&gt;
+        \n-&#032;d &lt;query&gt;
         \n-&#032;google &lt;query&gt;
         \n-&#032;wikipedia &lt;query&gt;
         \n-&#032;yahoo &lt;query&gt;
+        \n-&#032;ecosia &lt;query&gt;
+        \n-&#032;maps &lt;query&gt;
+        \n-&#032;yt &lt;query&gt;
+        \n-&#032;ytm &lt;query&gt;
         \n
         \nName for search engine name can be abbreviated.
         \nFor example, \"d somequery\" is equivalent to \"duckduckgo somequery\".

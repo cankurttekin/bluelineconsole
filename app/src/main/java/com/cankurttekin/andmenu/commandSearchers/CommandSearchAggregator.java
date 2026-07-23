@@ -12,6 +12,7 @@ import com.cankurttekin.andmenu.commandSearchers.eachSearcher.FactorCommandSearc
 import com.cankurttekin.andmenu.commandSearchers.eachSearcher.HelpCommandSearcher;
 import com.cankurttekin.andmenu.commandSearchers.eachSearcher.NetUtilCommandSearcher;
 import com.cankurttekin.andmenu.commandSearchers.eachSearcher.PreferencesCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.RunModeCommandSearcher;
 import com.cankurttekin.andmenu.commandSearchers.eachSearcher.SearchEngineCommandSearcher;
 import com.cankurttekin.andmenu.commandSearchers.eachSearcher.SearchEngineDefaultCommandSearcher;
 import com.cankurttekin.andmenu.commandSearchers.eachSearcher.URICommandSearcher;
@@ -35,6 +36,7 @@ public class CommandSearchAggregator {
         // Starting with specific string
         commandSearcherList.add(new HelpCommandSearcher());
         commandSearcherList.add(new PreferencesCommandSearcher());
+        commandSearcherList.add(new RunModeCommandSearcher());
         commandSearcherList.add(new DateCommandSearcher());
         commandSearcherList.add(new URICommandSearcher());
         commandSearcherList.add(new NetUtilCommandSearcher());

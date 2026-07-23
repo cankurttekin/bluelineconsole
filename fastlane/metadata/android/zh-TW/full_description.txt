@@ -12,21 +12,22 @@ andmenu 是一款輕量級、以鍵盤操作為核心的啟動器，專為極速
 
 可用指令：
 
-    help
-    config
-    date
-    ping 主機
-    ping6 主機
-    all_apps
-    hidden_apps
-    bing 搜尋內容 (Bing 搜尋)
-    d 搜尋內容 (DuckDuckGo)
-    google 搜尋內容 (Google)
-    ecosia 搜尋內容 (Ecosia)
-    maps 搜尋內容 (Google 地圖)
-    ytm 搜尋內容 (YouTube Music)
-    yt 搜尋內容 (YouTube)
-    wikipedia 搜尋內容
-    yahoo 搜尋內容
+    - help
+    - config
+    - date
+    - ping 主機
+    - ping6 主機
+    - all_apps
+    - hidden_apps
+    - sys [wifi, bluetooth, mobile_data, location, airplane_mode]
+    - bing 搜尋內容 (Bing 搜尋)
+    - d 搜尋內容 (DuckDuckGo)
+    - google 搜尋內容 (Google)
+    - ecosia 搜尋內容 (Ecosia)
+    - maps 搜尋內容 (Google 地圖)
+    - ytm 搜尋內容 (YouTube Music)
+    - yt 搜尋內容 (YouTube)
+    - wikipedia 搜尋內容
+    - yahoo 搜尋內容
 
 原始碼: https://github.com/cankurttekin/andmenu

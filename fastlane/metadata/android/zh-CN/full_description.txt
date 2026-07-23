@@ -12,21 +12,22 @@ andmenu 是一款轻量级、以键盘操作为核心的启动器，旨在 provi
 
 可用命令：
 
-    help
-    config
-    date
-    ping 主机
-    ping6 主机
-    all_apps
-    hidden_apps
-    bing 搜索内容 (Bing 搜索)
-    d 搜索内容 (DuckDuckGo)
-    google 搜索内容 (Google)
-    ecosia 搜索内容 (Ecosia)
-    maps 搜索内容 (Google 地图)
-    ytm 搜索内容 (YouTube Music)
-    yt 搜索内容 (YouTube)
-    wikipedia 搜索内容
-    yahoo 搜索内容
+    - help
+    - config
+    - date
+    - ping 主机
+    - ping6 主机
+    - all_apps
+    - hidden_apps
+    - sys [wifi, bluetooth, mobile_data, location, airplane_mode]
+    - bing 搜索内容 (Bing 搜索)
+    - d 搜索内容 (DuckDuckGo)
+    - google 搜索内容 (Google)
+    - ecosia 搜索内容 (Ecosia)
+    - maps 搜索内容 (Google 地图)
+    - ytm 搜索内容 (YouTube Music)
+    - yt 搜索内容 (YouTube)
+    - wikipedia 搜索内容
+    - yahoo 搜索内容
 
 源代码: https://github.com/cankurttekin/andmenu
