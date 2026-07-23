@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;

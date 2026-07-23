@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.animation.LayoutTransition;
 import android.annotation.SuppressLint;
@@ -18,9 +18,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.theming.AppTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.AppThemeDirectory;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.theming.AppTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.AppThemeDirectory;
 
 
 public class BaseWindowActivity extends AppCompatActivity {

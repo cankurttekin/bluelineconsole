@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain.theming;
+package com.cankurttekin.andmenu.applicationMain.theming;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,7 +9,7 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.GravityInt;
 import androidx.annotation.LayoutRes;
 
-import net.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
+import com.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
 
 
 public interface AppTheme {

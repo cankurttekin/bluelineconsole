@@ -1,4 +1,4 @@
-package net.cankurttekin.lib.bluelinecalculator;
+package com.cankurttekin.lib.bluelinecalculator;
 
 public class ParseResult {
     private final FormulaPart formulaPart;

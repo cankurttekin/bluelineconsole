@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -11,7 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import net.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.R;
 
 public class PreferencesAccentColorActivity extends BaseWindowActivity {
 

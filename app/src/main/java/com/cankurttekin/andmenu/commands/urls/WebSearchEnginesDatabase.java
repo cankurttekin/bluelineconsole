@@ -1,13 +1,13 @@
-package net.cankurttekin.andmenu.commands.urls;
+package com.cankurttekin.andmenu.commands.urls;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Pair;
 
-import net.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
-import net.cankurttekin.andmenu.dataStore.persistent.URLEntry;
-import net.cankurttekin.andmenu.dataStore.persistent.URLPreferences;
+import com.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
+import com.cankurttekin.andmenu.dataStore.persistent.URLEntry;
+import com.cankurttekin.andmenu.dataStore.persistent.URLPreferences;
 
 import java.util.ArrayList;
 import java.util.Arrays;

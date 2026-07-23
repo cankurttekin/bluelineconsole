@@ -1,11 +1,11 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
 
 public class NotificationMigrationLostActivity extends BaseWindowActivity {
     public NotificationMigrationLostActivity() {

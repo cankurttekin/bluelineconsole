@@ -1,4 +1,4 @@
-package net.cankurttekin.lib.bluelinecalculator;
+package com.cankurttekin.lib.bluelinecalculator;
 
 import org.junit.Test;
 
@@ -9,8 +9,8 @@ import java.lang.reflect.Method;
 
 import java.util.List;
 
-import net.cankurttekin.lib.bluelinecalculator.units.UnitDirectory;
-import net.cankurttekin.lib.bluelinecalculator.units.data.UnitDirectoryBasicData;
+import com.cankurttekin.lib.bluelinecalculator.units.UnitDirectory;
+import com.cankurttekin.lib.bluelinecalculator.units.data.UnitDirectoryBasicData;
 
 
 public class CalculatorUnitTests {

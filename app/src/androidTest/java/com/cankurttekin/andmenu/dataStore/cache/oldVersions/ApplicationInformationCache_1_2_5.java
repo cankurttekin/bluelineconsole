@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.dataStore.cache.oldVersions;
+package com.cankurttekin.andmenu.dataStore.cache.oldVersions;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import net.cankurttekin.andmenu.dataStore.cache.ApplicationInformation;
+import com.cankurttekin.andmenu.dataStore.cache.ApplicationInformation;
 
 import java.io.File;
 import java.util.ArrayList;

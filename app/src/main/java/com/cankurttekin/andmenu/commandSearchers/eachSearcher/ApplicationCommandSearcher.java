@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commandSearchers.eachSearcher;
+package com.cankurttekin.andmenu.commandSearchers.eachSearcher;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,16 +17,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
-import net.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
-import net.cankurttekin.andmenu.commands.applications.ApplicationDatabase;
-import net.cankurttekin.andmenu.commands.applications.ApplicationSettings;
-import net.cankurttekin.andmenu.commands.applications.ApplicationUsageHistory;
-import net.cankurttekin.andmenu.dataStore.cache.ApplicationInformation;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.CommandSearcher;
-import net.cankurttekin.andmenu.interfaces.EventLauncher;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
+import com.cankurttekin.andmenu.commands.applications.ApplicationDatabase;
+import com.cankurttekin.andmenu.commands.applications.ApplicationSettings;
+import com.cankurttekin.andmenu.commands.applications.ApplicationUsageHistory;
+import com.cankurttekin.andmenu.dataStore.cache.ApplicationInformation;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.CommandSearcher;
+import com.cankurttekin.andmenu.interfaces.EventLauncher;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,25 +1,25 @@
-package net.cankurttekin.andmenu.commandSearchers;
+package com.cankurttekin.andmenu.commandSearchers;
 
 import android.content.Context;
 
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.ApplicationCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.CalendarCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.CalculatorCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.ColorDisplayCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.ContactSearchCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.DateCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.FactorCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.HelpCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.NetUtilCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.PreferencesCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.SearchEngineCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.SearchEngineDefaultCommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.URICommandSearcher;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.WidgetCommandSearcher;
-import net.cankurttekin.andmenu.dataStore.persistent.HomeScreenSetting;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.CommandSearcher;
-import net.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.ApplicationCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.CalendarCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.CalculatorCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.ColorDisplayCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.ContactSearchCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.DateCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.FactorCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.HelpCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.NetUtilCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.PreferencesCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.SearchEngineCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.SearchEngineDefaultCommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.URICommandSearcher;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.WidgetCommandSearcher;
+import com.cankurttekin.andmenu.dataStore.persistent.HomeScreenSetting;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.CommandSearcher;
+import com.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
 
 import java.util.List;
 import java.util.ArrayList;

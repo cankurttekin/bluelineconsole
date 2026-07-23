@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.appwidget.AppWidgetProviderInfo;
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import net.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.R;
 
 import java.util.List;
 

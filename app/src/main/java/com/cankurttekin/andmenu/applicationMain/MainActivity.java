@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -17,11 +17,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
-import net.cankurttekin.andmenu.commandSearchers.CommandSearchAggregator;
-import net.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
+import com.cankurttekin.andmenu.commandSearchers.CommandSearchAggregator;
+import com.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
 
 
 public class MainActivity extends BaseWindowActivity {

@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain.theming.eachTheme;
+package com.cankurttekin.andmenu.applicationMain.theming.eachTheme;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.util.TypedValue;
 import android.widget.RemoteViews;
 import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatDelegate;
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
 
 public class RosePineTheme extends BaseTheme {
     private static final String THEME_ID = "rosepine";

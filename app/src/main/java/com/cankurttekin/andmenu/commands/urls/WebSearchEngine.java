@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commands.urls;
+package com.cankurttekin.andmenu.commands.urls;
 
 import java.util.Set;
 

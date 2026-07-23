@@ -1,11 +1,11 @@
-package net.cankurttekin.andmenu.dataStore.persistent;
+package com.cankurttekin.andmenu.dataStore.persistent;
 
 import android.test.AndroidTestCase;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import net.cankurttekin.andmenu.dataStore.persistent.oldVersions.*;
+import com.cankurttekin.andmenu.dataStore.persistent.oldVersions.*;
 
 import org.junit.Before;
 import org.junit.Test;

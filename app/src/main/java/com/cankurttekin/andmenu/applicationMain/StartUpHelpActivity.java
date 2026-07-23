@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,7 +7,7 @@ import android.preference.PreferenceManager;
 import android.view.Gravity;
 import android.widget.CheckBox;
 
-import net.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.R;
 
 public class StartUpHelpActivity extends BaseWindowActivity {
     public static final String PREF_KEY_SHOW_STARTUP_HELP = "pref_main_show_startup_help";

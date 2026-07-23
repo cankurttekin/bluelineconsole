@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain.theming.eachTheme;
+package com.cankurttekin.andmenu.applicationMain.theming.eachTheme;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -8,8 +8,8 @@ import android.widget.RemoteViews;
 import androidx.annotation.ColorInt;
 import androidx.annotation.StringRes;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
 
 public class DmenuTheme extends BaseTheme {
     private static final String THEME_ID = "dmenu";

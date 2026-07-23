@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commandSearchers.eachSearcher;
+package com.cankurttekin.andmenu.commandSearchers.eachSearcher;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,13 +7,13 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
-import net.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
-import net.cankurttekin.andmenu.commands.netutils.PingActivity;
-import net.cankurttekin.andmenu.commands.netutils.Ping6Activity;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.CommandSearcher;
-import net.cankurttekin.andmenu.interfaces.EventLauncher;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
+import com.cankurttekin.andmenu.commands.netutils.PingActivity;
+import com.cankurttekin.andmenu.commands.netutils.Ping6Activity;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.CommandSearcher;
+import com.cankurttekin.andmenu.interfaces.EventLauncher;
 
 import java.util.ArrayList;
 import java.util.List;

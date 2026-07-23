@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.wrapperForAndroid;
+package com.cankurttekin.andmenu.wrapperForAndroid;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -22,9 +22,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
-import net.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
+import com.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
 
 
 public final class AppWidgetsHostManager {

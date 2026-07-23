@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -18,9 +18,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceManager;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.EventLauncher;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.EventLauncher;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,10 +1,10 @@
-package net.cankurttekin.andmenu.interfaces;
+package com.cankurttekin.andmenu.interfaces;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
 
 
 public interface CandidateEntry {

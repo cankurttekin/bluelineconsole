@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commands.applications;
+package com.cankurttekin.andmenu.commands.applications;
 
 import android.content.Context;
 import android.content.SharedPreferences;

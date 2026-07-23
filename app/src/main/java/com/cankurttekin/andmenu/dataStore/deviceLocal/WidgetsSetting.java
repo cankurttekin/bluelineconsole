@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.dataStore.deviceLocal;
+package com.cankurttekin.andmenu.dataStore.deviceLocal;
 
 import android.annotation.SuppressLint;
 import android.appwidget.AppWidgetProviderInfo;
@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.preference.PreferenceManager;
 
-import net.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
+import com.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
 
 import java.util.ArrayList;
 import java.util.List;

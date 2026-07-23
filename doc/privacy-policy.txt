@@ -4,7 +4,7 @@ andmenu Privacy Policy
 1. Coverage of this Privacy Policy: This Privacy Policy covers the behavior of andmenu application released on the links on List 1 below by cankurttekin, as long as andmenu is run on Android with API that is not modified from the one documented in https://developer.android.com/. Please beware that anything outside of andmenu application is not covered by this Privacy Policy, including any devices, softwares, or services you use to run or download andmenu. If the user send the developer any information by the method out of andmenu, including e-mails or GitHub issues, this Privacy Policy is not applied.
 
   List 1: Links that the andmenu is released under this Privacy Policy
-    - https://github.com/cankurttekin/bluelineconsole/releases
+    - https://github.com/cankurttekin/andmenu/releases
     - https://f-droid.org/en/packages/cankurttekin/andmenu
 
 

@@ -1,9 +1,9 @@
-package net.cankurttekin.andmenu.commandSearchers.lib;
+package com.cankurttekin.andmenu.commandSearchers.lib;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
 
-import net.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.R;
 
 public class StringMatchStrategy {
     public static final int SUBSTRING = 1;

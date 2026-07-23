@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.dataStore.persistent;
+package com.cankurttekin.andmenu.dataStore.persistent;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -60,8 +60,8 @@ public class URLPreferencesTest extends AndroidTestCase {
     public void urlPreferencesUpgradeFrom_1_2_5_Test() {
         URLPreferences.destroyFilesForCleanTest(this.getContext());
 
-        net.cankurttekin.andmenu.dataStore.persistent.oldVersions.URLPreferences_1_2_5 oldVersionInstance =
-                net.cankurttekin.andmenu.dataStore.persistent.oldVersions.URLPreferences_1_2_5.getInstance(this.getContext());
+        com.cankurttekin.andmenu.dataStore.persistent.oldVersions.URLPreferences_1_2_5 oldVersionInstance =
+                com.cankurttekin.andmenu.dataStore.persistent.oldVersions.URLPreferences_1_2_5.getInstance(this.getContext());
 
         List<URLEntry> entries = new ArrayList<>();
 

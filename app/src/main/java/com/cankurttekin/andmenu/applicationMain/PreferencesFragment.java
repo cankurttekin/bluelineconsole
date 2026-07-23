@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.app.WallpaperManager;
 import android.content.Intent;
@@ -15,14 +15,14 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import net.cankurttekin.andmenu.BuildConfig;
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
-import net.cankurttekin.andmenu.applicationMain.theming.AppThemeDirectory;
-import net.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
-import net.cankurttekin.andmenu.commands.urls.WebSearchEngine;
-import net.cankurttekin.andmenu.commands.urls.WebSearchEnginesDatabase;
-import net.cankurttekin.andmenu.widget.LauncherWidgetProvider;
+import com.cankurttekin.andmenu.BuildConfig;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
+import com.cankurttekin.andmenu.applicationMain.theming.AppThemeDirectory;
+import com.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
+import com.cankurttekin.andmenu.commands.urls.WebSearchEngine;
+import com.cankurttekin.andmenu.commands.urls.WebSearchEnginesDatabase;
+import com.cankurttekin.andmenu.widget.LauncherWidgetProvider;
 
 import java.util.List;
 

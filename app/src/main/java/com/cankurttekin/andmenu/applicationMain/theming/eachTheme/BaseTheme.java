@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain.theming.eachTheme;
+package com.cankurttekin.andmenu.applicationMain.theming.eachTheme;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -18,9 +18,9 @@ import android.widget.TextView;
 import androidx.annotation.CallSuper;
 import androidx.annotation.GravityInt;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
-import net.cankurttekin.andmenu.applicationMain.theming.AppTheme;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
+import com.cankurttekin.andmenu.applicationMain.theming.AppTheme;
 
 
 public abstract class BaseTheme implements AppTheme {

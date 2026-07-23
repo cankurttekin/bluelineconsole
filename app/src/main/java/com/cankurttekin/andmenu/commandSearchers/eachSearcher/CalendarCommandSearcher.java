@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commandSearchers.eachSearcher;
+package com.cankurttekin.andmenu.commandSearchers.eachSearcher;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -17,11 +17,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.CommandSearcher;
-import net.cankurttekin.andmenu.interfaces.EventLauncher;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.CommandSearcher;
+import com.cankurttekin.andmenu.interfaces.EventLauncher;
 
 import java.text.DateFormatSymbols;
 import java.util.ArrayList;

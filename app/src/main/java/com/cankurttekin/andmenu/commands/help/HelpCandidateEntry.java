@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commands.help;
+package com.cankurttekin.andmenu.commands.help;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,11 +14,11 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import net.cankurttekin.andmenu.BuildConfig;
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.EventLauncher;
+import com.cankurttekin.andmenu.BuildConfig;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.EventLauncher;
 
 public class HelpCandidateEntry implements CandidateEntry {
     @Override

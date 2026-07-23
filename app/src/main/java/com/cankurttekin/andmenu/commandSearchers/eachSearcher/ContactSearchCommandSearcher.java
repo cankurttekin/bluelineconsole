@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commandSearchers.eachSearcher;
+package com.cankurttekin.andmenu.commandSearchers.eachSearcher;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,13 +11,13 @@ import androidx.annotation.NonNull;
 import androidx.core.util.Pair;
 import androidx.preference.PreferenceManager;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
-import net.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.CommandSearcher;
-import net.cankurttekin.andmenu.interfaces.EventLauncher;
-import net.cankurttekin.andmenu.wrapperForAndroid.ContactsReader;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.commandSearchers.lib.StringMatchStrategy;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.CommandSearcher;
+import com.cankurttekin.andmenu.interfaces.EventLauncher;
+import com.cankurttekin.andmenu.wrapperForAndroid.ContactsReader;
 
 import java.util.ArrayList;
 import java.util.Collections;

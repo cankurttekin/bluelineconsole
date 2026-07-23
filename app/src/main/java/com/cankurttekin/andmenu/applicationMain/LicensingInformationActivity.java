@@ -1,9 +1,9 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.os.Bundle;
 import android.widget.TextView;
 
-import net.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.R;
 
 public class LicensingInformationActivity extends BaseWindowActivity {
     // Could not include into values/strings.xml, possibly due to length limitation

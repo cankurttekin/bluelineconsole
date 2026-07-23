@@ -1,11 +1,11 @@
-package net.cankurttekin.andmenu.dataStore.persistent;
+package com.cankurttekin.andmenu.dataStore.persistent;
 
 import android.content.Context;
 
 import androidx.annotation.StringRes;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.lib.StringValidator;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.lib.StringValidator;
 
 public class URLEntry {
     public int id;

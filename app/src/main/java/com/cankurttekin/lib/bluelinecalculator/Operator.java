@@ -1,4 +1,4 @@
-package net.cankurttekin.lib.bluelinecalculator;
+package com.cankurttekin.lib.bluelinecalculator;
 
 public interface Operator extends FormulaPart {
     int getPriority(); // strictly greater than 0

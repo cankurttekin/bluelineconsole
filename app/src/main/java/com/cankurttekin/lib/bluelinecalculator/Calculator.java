@@ -1,7 +1,7 @@
-package net.cankurttekin.lib.bluelinecalculator;
+package com.cankurttekin.lib.bluelinecalculator;
 
-import net.cankurttekin.lib.bluelinecalculator.units.CombinedUnit;
-import net.cankurttekin.lib.bluelinecalculator.units.UnitDirectory;
+import com.cankurttekin.lib.bluelinecalculator.units.CombinedUnit;
+import com.cankurttekin.lib.bluelinecalculator.units.UnitDirectory;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

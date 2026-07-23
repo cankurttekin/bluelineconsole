@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.wrapperForAndroid;
+package com.cankurttekin.andmenu.wrapperForAndroid;
 
 import android.appwidget.AppWidgetHost;
 import android.os.Build;
@@ -7,8 +7,8 @@ import android.test.AndroidTestCase;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import net.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
-import net.cankurttekin.andmenu.dataStore.persistent.HomeScreenSetting;
+import com.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
+import com.cankurttekin.andmenu.dataStore.persistent.HomeScreenSetting;
 
 import org.junit.Before;
 import org.junit.Test;

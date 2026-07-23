@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.widget;
+package com.cankurttekin.andmenu.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -10,9 +10,9 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.RemoteViews;
 
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
-import net.cankurttekin.andmenu.applicationMain.theming.AppTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.AppThemeDirectory;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.applicationMain.theming.AppTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.AppThemeDirectory;
 
 
 public class LauncherWidgetProvider extends AppWidgetProvider {

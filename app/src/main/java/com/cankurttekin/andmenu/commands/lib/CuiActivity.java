@@ -1,12 +1,12 @@
-package net.cankurttekin.andmenu.commands.lib;
+package com.cankurttekin.andmenu.commands.lib;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
 
 
 public class CuiActivity extends BaseWindowActivity {

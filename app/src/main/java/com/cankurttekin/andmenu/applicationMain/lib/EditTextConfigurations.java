@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain.lib;
+package com.cankurttekin.andmenu.applicationMain.lib;
 
 import static android.view.inputmethod.EditorInfo.IME_FLAG_FORCE_ASCII;
 

@@ -1,12 +1,12 @@
-package net.cankurttekin.andmenu.commandSearchers.eachSearcher;
+package com.cankurttekin.andmenu.commandSearchers.eachSearcher;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import net.cankurttekin.andmenu.commands.help.HelpCandidateEntry;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.CommandSearcher;
+import com.cankurttekin.andmenu.commands.help.HelpCandidateEntry;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.CommandSearcher;
 
 import java.util.ArrayList;
 import java.util.List;

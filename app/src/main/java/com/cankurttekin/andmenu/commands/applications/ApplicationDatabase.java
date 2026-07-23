@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commands.applications;
+package com.cankurttekin.andmenu.commands.applications;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -7,8 +7,8 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.LocaleList;
 
-import net.cankurttekin.andmenu.dataStore.cache.ApplicationInformation;
-import net.cankurttekin.andmenu.dataStore.cache.ApplicationInformationCache;
+import com.cankurttekin.andmenu.dataStore.cache.ApplicationInformation;
+import com.cankurttekin.andmenu.dataStore.cache.ApplicationInformationCache;
 
 import java.util.ArrayList;
 import java.util.Collections;

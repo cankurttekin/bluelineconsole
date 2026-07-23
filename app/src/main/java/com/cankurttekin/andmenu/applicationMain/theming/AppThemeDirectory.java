@@ -1,18 +1,18 @@
-package net.cankurttekin.andmenu.applicationMain.theming;
+package com.cankurttekin.andmenu.applicationMain.theming;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
 
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.AndmenuDarkTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.AndmenuDefaultTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.AndmenuLightTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.DmenuDarkTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.DmenuLightTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.DmenuTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.GruvboxTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.MarineTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.OldComputerTheme;
-import net.cankurttekin.andmenu.applicationMain.theming.eachTheme.RosePineTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.AndmenuDarkTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.AndmenuDefaultTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.AndmenuLightTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.DmenuDarkTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.DmenuLightTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.DmenuTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.GruvboxTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.MarineTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.OldComputerTheme;
+import com.cankurttekin.andmenu.applicationMain.theming.eachTheme.RosePineTheme;
 
 import java.util.HashMap;
 import java.util.Map;

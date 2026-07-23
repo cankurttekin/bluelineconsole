@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain.theming;
+package com.cankurttekin.andmenu.applicationMain.theming;
 
 import org.junit.Test;
 

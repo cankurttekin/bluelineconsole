@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.lib;
+package com.cankurttekin.andmenu.lib;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain.theming.eachTheme;
+package com.cankurttekin.andmenu.applicationMain.theming.eachTheme;
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,8 +9,8 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.BaseWindowActivity;
 
 
 public class MarineTheme extends BaseTheme {

@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,12 +8,12 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
-import net.cankurttekin.andmenu.commands.urls.WebSearchEngine;
-import net.cankurttekin.andmenu.commands.urls.WebSearchEnginesDatabase;
-import net.cankurttekin.andmenu.dataStore.persistent.URLEntry;
-import net.cankurttekin.andmenu.dataStore.persistent.URLPreferences;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
+import com.cankurttekin.andmenu.commands.urls.WebSearchEngine;
+import com.cankurttekin.andmenu.commands.urls.WebSearchEnginesDatabase;
+import com.cankurttekin.andmenu.dataStore.persistent.URLEntry;
+import com.cankurttekin.andmenu.dataStore.persistent.URLPreferences;
 
 
 public class PreferencesEachURLActivity extends BaseWindowActivity {

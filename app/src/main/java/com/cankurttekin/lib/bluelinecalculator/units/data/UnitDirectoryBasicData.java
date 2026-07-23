@@ -1,10 +1,10 @@
-package net.cankurttekin.lib.bluelinecalculator.units.data;
+package com.cankurttekin.lib.bluelinecalculator.units.data;
 
-import net.cankurttekin.lib.bluelinecalculator.CalculatorExceptions;
-import net.cankurttekin.lib.bluelinecalculator.CalculatorNumber;
-import net.cankurttekin.lib.bluelinecalculator.units.CombinedUnit;
-import net.cankurttekin.lib.bluelinecalculator.units.Unit;
-import net.cankurttekin.lib.bluelinecalculator.units.UnitDirectory;
+import com.cankurttekin.lib.bluelinecalculator.CalculatorExceptions;
+import com.cankurttekin.lib.bluelinecalculator.CalculatorNumber;
+import com.cankurttekin.lib.bluelinecalculator.units.CombinedUnit;
+import com.cankurttekin.lib.bluelinecalculator.units.Unit;
+import com.cankurttekin.lib.bluelinecalculator.units.UnitDirectory;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.dataStore.persistent;
+package com.cankurttekin.andmenu.dataStore.persistent;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;

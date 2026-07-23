@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
-import net.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
+import com.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
 
 import java.util.ArrayList;
 import java.util.List;

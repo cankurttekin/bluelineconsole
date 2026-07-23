@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commandSearchers;
+package com.cankurttekin.andmenu.commandSearchers;
 
 import android.content.SharedPreferences;
 import android.test.AndroidTestCase;
@@ -7,11 +7,11 @@ import androidx.preference.PreferenceManager;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.SearchEngineCommandSearcher;
-import net.cankurttekin.andmenu.commands.urls.WebSearchEnginesDatabase;
-import net.cankurttekin.andmenu.dataStore.persistent.URLEntry;
-import net.cankurttekin.andmenu.dataStore.persistent.URLPreferences;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.SearchEngineCommandSearcher;
+import com.cankurttekin.andmenu.commands.urls.WebSearchEnginesDatabase;
+import com.cankurttekin.andmenu.dataStore.persistent.URLEntry;
+import com.cankurttekin.andmenu.dataStore.persistent.URLPreferences;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
 
 import org.junit.Before;
 import org.junit.Test;

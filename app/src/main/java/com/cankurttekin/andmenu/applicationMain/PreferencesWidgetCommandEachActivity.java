@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
-import net.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
-import net.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
+import com.cankurttekin.andmenu.dataStore.deviceLocal.WidgetsSetting;
+import com.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
 
 public class PreferencesWidgetCommandEachActivity extends BaseWindowActivity {
     public static final String INTENT_EXTRA_WIDGET_COMMAND_ID = "widget_command_id";

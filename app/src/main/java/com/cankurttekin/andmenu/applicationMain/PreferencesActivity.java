@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.Manifest;
 import android.content.Intent;
@@ -13,9 +13,9 @@ import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.commandSearchers.eachSearcher.ContactSearchCommandSearcher;
-import net.cankurttekin.andmenu.wrapperForAndroid.ContactsReader;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.commandSearchers.eachSearcher.ContactSearchCommandSearcher;
+import com.cankurttekin.andmenu.wrapperForAndroid.ContactsReader;
 
 public class PreferencesActivity extends BaseWindowActivity {
     private static final int READ_CONTACT_PERMISSION_GRANT_REQUEST_ID = 1;

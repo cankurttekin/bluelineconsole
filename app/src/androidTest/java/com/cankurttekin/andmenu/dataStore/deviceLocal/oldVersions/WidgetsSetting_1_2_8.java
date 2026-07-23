@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.dataStore.deviceLocal.oldVersions;
+package com.cankurttekin.andmenu.dataStore.deviceLocal.oldVersions;
 
 import android.appwidget.AppWidgetProviderInfo;
 import android.content.ContentValues;
@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.preference.PreferenceManager;
 
-import net.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
+import com.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
 
 import java.util.ArrayList;
 import java.util.List;

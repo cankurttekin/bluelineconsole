@@ -1,12 +1,12 @@
-package net.cankurttekin.andmenu.dataStore.deviceLocal;
+package com.cankurttekin.andmenu.dataStore.deviceLocal;
 
 import android.test.AndroidTestCase;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import net.cankurttekin.andmenu.dataStore.deviceLocal.oldVersions.*;
-import net.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
+import com.cankurttekin.andmenu.dataStore.deviceLocal.oldVersions.*;
+import com.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
 
 import org.junit.Before;
 import org.junit.Test;

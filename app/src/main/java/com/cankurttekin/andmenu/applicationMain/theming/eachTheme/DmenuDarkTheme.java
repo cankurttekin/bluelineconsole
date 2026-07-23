@@ -1,9 +1,9 @@
-package net.cankurttekin.andmenu.applicationMain.theming.eachTheme;
+package com.cankurttekin.andmenu.applicationMain.theming.eachTheme;
 
 import android.content.Context;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatDelegate;
-import net.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.R;
 
 public class DmenuDarkTheme extends DmenuTheme {
     private static final String THEME_ID = "dmenu_dark";

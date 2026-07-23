@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.wrapperForAndroid;
+package com.cankurttekin.andmenu.wrapperForAndroid;
 
 import android.Manifest;
 import android.content.ContentResolver;

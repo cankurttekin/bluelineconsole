@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
-import net.cankurttekin.andmenu.dataStore.persistent.HomeScreenSetting;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.lib.EditTextConfigurations;
+import com.cankurttekin.andmenu.dataStore.persistent.HomeScreenSetting;
 
 public class PreferencesHomeScreenEachDefaultItemCommandActivity extends BaseWindowActivity {
     public static final String INTENT_EXTRA_ITEM_ID = "item_id";

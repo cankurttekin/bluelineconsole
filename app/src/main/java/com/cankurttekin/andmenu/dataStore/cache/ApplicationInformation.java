@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.dataStore.cache;
+package com.cankurttekin.andmenu.dataStore.cache;
 
 public class ApplicationInformation {
     private final String packageName;

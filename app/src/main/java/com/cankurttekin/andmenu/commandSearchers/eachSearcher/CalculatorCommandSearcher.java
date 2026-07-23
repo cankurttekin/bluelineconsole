@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.commandSearchers.eachSearcher;
+package com.cankurttekin.andmenu.commandSearchers.eachSearcher;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -11,15 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.util.Pair;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
-import net.cankurttekin.lib.bluelinecalculator.Calculator;
-import net.cankurttekin.lib.bluelinecalculator.CalculatorExceptions;
-import net.cankurttekin.lib.bluelinecalculator.CalculatorNumber;
-import net.cankurttekin.andmenu.interfaces.CandidateEntry;
-import net.cankurttekin.andmenu.interfaces.CommandSearcher;
-import net.cankurttekin.andmenu.interfaces.EventLauncher;
-import net.cankurttekin.lib.bluelinecalculator.units.data.UnitDirectoryBasicData;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.lib.bluelinecalculator.Calculator;
+import com.cankurttekin.lib.bluelinecalculator.CalculatorExceptions;
+import com.cankurttekin.lib.bluelinecalculator.CalculatorNumber;
+import com.cankurttekin.andmenu.interfaces.CandidateEntry;
+import com.cankurttekin.andmenu.interfaces.CommandSearcher;
+import com.cankurttekin.andmenu.interfaces.EventLauncher;
+import com.cankurttekin.lib.bluelinecalculator.units.data.UnitDirectoryBasicData;
 
 import java.util.ArrayList;
 import java.util.List;

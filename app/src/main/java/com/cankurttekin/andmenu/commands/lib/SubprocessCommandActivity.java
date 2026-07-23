@@ -1,8 +1,8 @@
-package net.cankurttekin.andmenu.commands.lib;
+package com.cankurttekin.andmenu.commands.lib;
 
 import android.os.Bundle;
 
-import net.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.R;
 
 import java.io.BufferedInputStream;
 import java.io.File;

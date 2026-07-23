@@ -1,9 +1,9 @@
-package net.cankurttekin.andmenu.commands.netutils;
+package com.cankurttekin.andmenu.commands.netutils;
 
 import android.content.Intent;
 
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
-import net.cankurttekin.andmenu.commands.lib.SubprocessCommandActivity;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.commands.lib.SubprocessCommandActivity;
 
 
 public class PingActivity extends SubprocessCommandActivity {

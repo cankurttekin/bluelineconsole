@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.dataStore.cache;
+package com.cankurttekin.andmenu.dataStore.cache;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;

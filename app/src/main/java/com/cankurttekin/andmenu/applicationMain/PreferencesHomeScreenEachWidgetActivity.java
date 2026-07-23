@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
 
 public class PreferencesHomeScreenEachWidgetActivity extends BaseWindowActivity {
     public static final String INTENT_EXTRA_WIDGET_ID = "widget_id";

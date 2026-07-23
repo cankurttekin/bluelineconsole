@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,9 +14,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.commands.urls.WebSearchEngine;
-import net.cankurttekin.andmenu.commands.urls.WebSearchEnginesDatabase;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.commands.urls.WebSearchEngine;
+import com.cankurttekin.andmenu.commands.urls.WebSearchEnginesDatabase;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package net.cankurttekin.andmenu.applicationMain;
+package com.cankurttekin.andmenu.applicationMain;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import net.cankurttekin.andmenu.R;
-import net.cankurttekin.andmenu.dataStore.persistent.HomeScreenSetting;
-import net.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
+import com.cankurttekin.andmenu.R;
+import com.cankurttekin.andmenu.dataStore.persistent.HomeScreenSetting;
+import com.cankurttekin.andmenu.wrapperForAndroid.AppWidgetsHostManager;
 
 import java.util.ArrayList;
 import java.util.List;

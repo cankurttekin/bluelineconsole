@@ -1,6 +1,6 @@
-package net.cankurttekin.andmenu.interfaces;
+package com.cankurttekin.andmenu.interfaces;
 
-import net.cankurttekin.andmenu.applicationMain.MainActivity;
+import com.cankurttekin.andmenu.applicationMain.MainActivity;
 
 public interface EventLauncher {
     /**
