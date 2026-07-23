@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">andmenu</string>
     <string name="preferences_item_about_this_app_github_repo">andmenu on GitHub</string>
-    <string name="preferences_item_about_this_app_github_repo_summary">https://github.com/nhirokinet/andmenu 에 접근</string>
+    <string name="preferences_item_about_this_app_github_repo_summary">https://github.com/cankurttekin/andmenu 에 접근</string>
 
     <!-- ActivityMain -->
     <string name="displayedFullVersionString">Version %1$s</string>
@@ -193,7 +193,7 @@
         아래와 같이 검색하실 수 있습니다.
         \n
         \n-&#032;앱 이름(예: andmenu)의 일부
-        \n-&#032;Package name (예: net.nhiroki.andmenu)의 일부
+        \n-&#032;Package name (예: net.cankurttekin.andmenu)의 일부
         \n-&#032;URL (예: https://example.com/)
         \n-&#032;계산식 (예: 2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm)
         \n-&#032;아래 명령어 (예: help)

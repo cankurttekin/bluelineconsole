@@ -1,0 +1,361 @@
+package net.cankurttekin.lib.bluelinecalculator;
+
+import net.cankurttekin.lib.bluelinecalculator.units.CombinedUnit;
+import net.cankurttekin.lib.bluelinecalculator.units.UnitDirectory;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.List;
+
+public class CalculatorNumber implements FormulaPart {
+    public int getPrecision() {
+        return Precision.PRECISION_NULL;
+    }
+
+    public BigDecimalNumber convertUnit(CombinedUnit combinedUnit) throws CalculatorExceptions.UnitConversionException {
+        throw new RuntimeException("This is not a number");
+    }
+
+    // Result outputs final output String in decimal..
+    public BigDecimalNumber generateFinalDecimalValue() {
+        throw new RuntimeException("This is not a number");
+    }
+
+    public BigDecimalNumber generatePossiblyPreferredOutputValue() {
+        return null;
+    }
+
+    public String generateFinalString() {
+        return "...";
+    }
+
+    public static class
+
+    BigDecimalNumber extends CalculatorNumber {
+        public static BigDecimalNumber one(UnitDirectory unitDirectory) {
+            return new CalculatorNumber.BigDecimalNumber(BigDecimal.ONE, CalculatorNumber.Precision.PRECISION_NO_ERROR, null, unitDirectory);
+        }
+
+        public final BigDecimal val;
+        public final BigDecimal denominator;
+        private final int precision;
+        private CombinedUnit combinedUnit; // this changes output, be careful to modify
+        public boolean specialOutput = false;  // this changes output, be careful to modify
+        private final UnitDirectory unitDirectory;
+
+        public BigDecimalNumber(final BigDecimalNumber copiedFrom, UnitDirectory unitDirectory) {
+            this.val = copiedFrom.val;
+            this.denominator = copiedFrom.denominator;
+            this.precision = copiedFrom.precision;
+            this.combinedUnit = copiedFrom.combinedUnit;
+            this.specialOutput = copiedFrom.specialOutput;
+            this.unitDirectory = unitDirectory;
+        }
+
+        public BigDecimalNumber(final String val, UnitDirectory unitDirectory) {
+            this.val = new BigDecimal(val);
+            this.denominator = BigDecimal.ONE;
+            this.precision = Precision.PRECISION_NO_ERROR;
+            this.combinedUnit = null;
+            this.unitDirectory = unitDirectory;
+        }
+
+        public BigDecimalNumber(final BigDecimal val, final int precision, final CombinedUnit combinedUnit, UnitDirectory unitDirectory) {
+            this.val = val;
+            this.denominator = BigDecimal.ONE;
+            this.precision = precision;
+            this.combinedUnit = combinedUnit;
+            this.unitDirectory = unitDirectory;
+        }
+
+        private BigDecimalNumber(final BigDecimal val, final BigDecimal denominator, final int precision, final CombinedUnit combinedUnit, UnitDirectory unitDirectory) {
+            this.val = val;
+            this.denominator = denominator;
+            this.precision = precision;
+            this.combinedUnit = combinedUnit;
+            this.unitDirectory = unitDirectory;
+        }
+
+        @Override
+        public int getPrecision() {
+            return precision;
+        }
+
+        public CombinedUnit getCombinedUnit() {
+            return this.combinedUnit;
+        }
+
+        public BigDecimalNumber removeCombinedUnit() {
+            return new BigDecimalNumber(this.val, this.denominator, this.precision, null, this.unitDirectory);
+        }
+
+        public BigDecimalNumber applyCombinedUnit(CombinedUnit combinedUnit) throws CalculatorExceptions.IllegalFormulaException {
+            if (this.combinedUnit != null && !this.combinedUnit.equals(null)) {
+                throw new CalculatorExceptions.IllegalFormulaException();
+            }
+            return new BigDecimalNumber(this.val, this.denominator, this.precision, combinedUnit, this.unitDirectory);
+        }
+
+        public BigDecimalNumber applyMinusJustToNumber() {
+            return new BigDecimalNumber(this.val.multiply(new BigDecimal("-1")), this.denominator, this.precision, this.combinedUnit, this.unitDirectory);
+        }
+
+        public static BigDecimal normalizeBigDecimal(final BigDecimal in, final int precision) {
+            if (in.compareTo(BigDecimal.ZERO) == 0) {
+                return BigDecimal.ZERO;
+            }
+            BigDecimal ret = in.stripTrailingZeros();
+            if (precision == CalculatorNumber.Precision.PRECISION_NO_ERROR && ret.scale() < 0) {
+                //noinspection BigDecimalMethodWithoutRoundingCalled
+                ret = ret.setScale(0);
+            }
+
+            return ret;
+        }
+
+        private CombinedUnit finalUnit() {
+            BigDecimalNumber displayedResult = this;
+
+            if (this.combinedUnit != null && this.combinedUnit.isLinear()) {
+                try {
+                    displayedResult = displayedResult.multiply(displayedResult.combinedUnit.calculateRatioToUnifyUnitInEachDimension());
+                    CombinedUnit shouldConvertTo = this.unitDirectory.getShouldConvertFrom(displayedResult.combinedUnit);
+                    if (shouldConvertTo != null) {
+                        displayedResult = displayedResult.convertUnit(shouldConvertTo);
+                    }
+                } catch (CalculatorExceptions.IllegalFormulaException | CalculatorExceptions.UnitConversionException e) {
+                    throw new RuntimeException("Unit unifying failure");
+                }
+            }
+
+            return displayedResult.combinedUnit;
+        }
+
+        public BigDecimalNumber generateFinalDecimalValue() {
+            BigDecimalNumber displayedResult = this;
+            if (this.combinedUnit != null && this.combinedUnit.isLinear()) {
+                try {
+                    displayedResult = displayedResult.convertUnit(this.finalUnit());
+                } catch (CalculatorExceptions.UnitConversionException e) {
+                    throw new RuntimeException("Unit unifying failure");
+                }
+            }
+            try {
+                //noinspection BigDecimalMethodWithoutRoundingCalled
+                return new CalculatorNumber.BigDecimalNumber(displayedResult.val.divide(displayedResult.denominator), displayedResult.precision, displayedResult.combinedUnit, this.unitDirectory);
+            } catch (ArithmeticException e) {
+                // continue to precision error
+            }
+
+            return new CalculatorNumber.BigDecimalNumber(displayedResult.val.divide(displayedResult.denominator, 20, RoundingMode.HALF_UP), Precision.calculateLowerPrecision(displayedResult.precision, Precision.PRECISION_SCALE_20), displayedResult.combinedUnit, this.unitDirectory);
+        }
+
+        public BigDecimalNumber generatePossiblyPreferredOutputValue() {
+            if (this.combinedUnit == null) {
+                return null;
+            }
+
+            BigDecimalNumber candidate = unitDirectory.findSpecialPreferredForm(this);
+            if (candidate != null) {
+                return candidate;
+            }
+
+            List<CombinedUnit> candidates = this.unitDirectory.getPreferredCombinedUnits(this.combinedUnit);
+            if (! candidates.isEmpty()) {
+                for (CombinedUnit c: candidates) {
+                    if (c.equals(this.finalUnit())) {
+                        return null;
+                    }
+                }
+                BigDecimalNumber previousOutput = null;
+
+                for (CombinedUnit c: candidates) {
+                    // This catch can simply continue to the next candidate
+                    //noinspection CatchMayIgnoreException
+                    try {
+                        BigDecimalNumber output = this.convertUnit(c);
+                        if (output.removeCombinedUnit().compareTo(BigDecimalNumber.one(this.unitDirectory)) == -1) {
+                            return previousOutput != null ? previousOutput.generateFinalDecimalValue() : output.generateFinalDecimalValue();
+                        }
+                        previousOutput = output;
+                    } catch (CalculatorExceptions.UnitConversionException | CalculatorExceptions.IllegalFormulaException e) {
+                    }
+                }
+
+                return previousOutput.generateFinalDecimalValue();
+            }
+
+            return null;
+        }
+
+        @Override
+        public String toString() {
+            return this.val + "/" + this.denominator + " " + ((this.combinedUnit == null) ? "No Unit" : this.combinedUnit.toString()) + " with Precision " + this.precision;
+        }
+
+        public int compareTo(BigDecimalNumber o) throws CalculatorExceptions.UnitConversionException, CalculatorExceptions.IllegalFormulaException {
+            BigDecimalNumber diff = this.subtract(o);
+            return diff.val.signum() * diff.denominator.signum();
+        }
+
+        @Override
+        public String generateFinalString() {
+            String suffix = "";
+            if (this.denominator.compareTo(BigDecimal.ONE) != 0) {
+                suffix = "/" + this.denominator;
+            }
+
+            if (this.specialOutput) {
+                String ret = this.unitDirectory.calculateSpecialPreferredForm(this);
+                if (ret != null) {
+                    return ret;
+                }
+            }
+
+            if (this.combinedUnit == null) {
+                return normalizeBigDecimal(this.val, this.precision) + suffix;
+            } else {
+                final String unitName = this.combinedUnit.calculateDisplayName();
+                return normalizeBigDecimal(this.val, this.precision) + suffix + (unitName.isEmpty() ? "" : " ") + unitName;
+            }
+        }
+
+        BigDecimalNumber makeUnitsExplicit() {
+            BigDecimalNumber ret = new BigDecimalNumber(this, this.unitDirectory);
+            ret.combinedUnit = ret.combinedUnit.explicitCombinedUnit();
+            return ret;
+        }
+
+        public BigDecimalNumber convertUnit(CombinedUnit combinedUnit) throws CalculatorExceptions.UnitConversionException {
+            if (this.combinedUnit == null) {
+                if (combinedUnit == null || combinedUnit.dimensionEquals(null)) {
+                    try {
+                        return this.divide(combinedUnit.calculateRatioAgainst(null));
+                    } catch (CalculatorExceptions.DivisionByZeroException e) {
+                        throw new RuntimeException("Zero division in convertUnit");
+                    } catch (CalculatorExceptions.IllegalFormulaException e) {
+                        throw new CalculatorExceptions.UnitConversionException(this.combinedUnit, combinedUnit, unitDirectory);
+                    }
+                }
+                throw new CalculatorExceptions.UnitConversionException(this.combinedUnit, combinedUnit, unitDirectory);
+            }
+            if (! this.combinedUnit.isLinear()) {
+                return this.combinedUnit.makeLinearValueFromThisUnit(this).convertUnit(combinedUnit).makeUnitsExplicit();
+            }
+            if (combinedUnit.isLinear()) {
+                if (! this.combinedUnit.dimensionEquals(combinedUnit)) {
+                    throw new CalculatorExceptions.UnitConversionException(this.combinedUnit, combinedUnit, unitDirectory);
+                }
+                try {
+                    return this.multiply(this.combinedUnit.calculateRatioAgainst(combinedUnit)).makeUnitsExplicit();
+                } catch (CalculatorExceptions.IllegalFormulaException e) {
+                    throw new CalculatorExceptions.UnitConversionException(this.combinedUnit, combinedUnit, unitDirectory);
+                }
+            }
+
+            return combinedUnit.makeThisUnitFromLinearValue(this);
+        }
+
+        public BigDecimalNumber add(BigDecimalNumber o) throws CalculatorExceptions.IllegalFormulaException, CalculatorExceptions.UnitConversionException {
+            if (this.combinedUnit == null && o.combinedUnit == null) {
+                return new BigDecimalNumber(this.val.multiply(o.denominator).add(o.val.multiply(this.denominator)), this.denominator.multiply(o.denominator), precision, null, this.unitDirectory);
+            }
+            if (this.combinedUnit == null || o.combinedUnit == null) {
+                if (this.combinedUnit == null && ! o.combinedUnit.dimensionEquals(null)) {
+                    throw new CalculatorExceptions.UnitConversionException(null, o.combinedUnit, unitDirectory);
+                }
+                if (! this.combinedUnit.dimensionEquals(null)) {
+                    throw new CalculatorExceptions.UnitConversionException(this.combinedUnit, o.combinedUnit, unitDirectory);
+                }
+            }
+            if (! this.combinedUnit.isLinear()) {
+                return this.combinedUnit.makeLinearValueFromThisUnit(this).add(o);
+            }
+            if (o.combinedUnit != null && ! o.combinedUnit.isLinear()) {
+                o = o.combinedUnit.makeLinearValueFromThisUnit(o);
+            }
+            o = o.convertUnit(this.combinedUnit);
+            return new BigDecimalNumber(this.val.multiply(o.denominator).add(o.val.multiply(this.denominator)), this.denominator.multiply(o.denominator), Precision.calculateLowerPrecision(this.precision, o.precision), this.combinedUnit, this.unitDirectory);
+        }
+
+        public BigDecimalNumber subtract(BigDecimalNumber o) throws CalculatorExceptions.IllegalFormulaException, CalculatorExceptions.UnitConversionException {
+            if (this.combinedUnit == null && o.combinedUnit == null) {
+                return new BigDecimalNumber(this.val.multiply(o.denominator).subtract(o.val.multiply(this.denominator)), this.denominator.multiply(o.denominator), precision, null, this.unitDirectory);
+            }
+            if (this.combinedUnit == null || o.combinedUnit == null) {
+                if (this.combinedUnit == null && ! o.combinedUnit.dimensionEquals(null)) {
+                    throw new CalculatorExceptions.UnitConversionException(null, o.combinedUnit, unitDirectory);
+                }
+                if (! this.combinedUnit.dimensionEquals(null)) {
+                    throw new CalculatorExceptions.UnitConversionException(this.combinedUnit, o.combinedUnit, unitDirectory);
+                }
+            }
+            if (! this.combinedUnit.isLinear()) {
+                return this.combinedUnit.makeLinearValueFromThisUnit(this).subtract(o);
+            }
+            if (o.combinedUnit != null && ! o.combinedUnit.isLinear()) {
+                o = o.combinedUnit.makeLinearValueFromThisUnit(o);
+            }
+            o = o.convertUnit(this.combinedUnit);
+
+            return new BigDecimalNumber(this.val.multiply(o.denominator).subtract(o.val.multiply(this.denominator)), this.denominator.multiply(o.denominator), Precision.calculateLowerPrecision(this.precision, o.precision), this.combinedUnit, this.unitDirectory);
+        }
+
+        public BigDecimalNumber multiply(BigDecimalNumber o) throws CalculatorExceptions.UnitConversionException, CalculatorExceptions.IllegalFormulaException {
+            CombinedUnit resultUnit = null;
+
+            if (this.combinedUnit != null || o.combinedUnit != null) {
+                if (this.combinedUnit != null && ! this.combinedUnit.isLinear()) {
+                    return this.combinedUnit.makeLinearValueFromThisUnit(this).multiply(o);
+                }
+                if (o.combinedUnit != null && ! o.combinedUnit.isLinear()) {
+                    o = o.combinedUnit.makeLinearValueFromThisUnit(o);
+                }
+                if (this.combinedUnit == null) {
+                    resultUnit = new CombinedUnit(this.unitDirectory);
+                } else {
+                    resultUnit = this.combinedUnit;
+                }
+                resultUnit = resultUnit.multiply(o.combinedUnit);
+            }
+
+            return new CalculatorNumber.BigDecimalNumber(this.val.multiply(o.val), this.denominator.multiply(o.denominator), Precision.calculateLowerPrecision(this.precision, o.precision), resultUnit, this.unitDirectory);
+        }
+
+        public BigDecimalNumber divide(BigDecimalNumber o) throws CalculatorExceptions.DivisionByZeroException, CalculatorExceptions.UnitConversionException, CalculatorExceptions.IllegalFormulaException {
+            CombinedUnit resultUnit = null;
+
+            if (this.combinedUnit != null || o.combinedUnit != null) {
+                if (this.combinedUnit != null && ! this.combinedUnit.isLinear()) {
+                    return this.combinedUnit.makeLinearValueFromThisUnit(this).divide(o);
+                }
+                if (o.combinedUnit != null && ! o.combinedUnit.isLinear()) {
+                    o = o.combinedUnit.makeLinearValueFromThisUnit(o);
+                }
+
+                if (this.combinedUnit == null) {
+                    resultUnit = new CombinedUnit(this.unitDirectory);
+                } else {
+                    resultUnit = this.combinedUnit;
+                }
+                resultUnit = resultUnit.divide(o.combinedUnit);
+            }
+
+            if (o.val.compareTo(BigDecimal.ZERO) == 0) {
+                throw new CalculatorExceptions.DivisionByZeroException();
+            }
+
+            return new CalculatorNumber.BigDecimalNumber(this.val.multiply(o.denominator), this.denominator.multiply(o.val), Precision.calculateLowerPrecision(this.precision, o.precision), resultUnit, this.unitDirectory);
+        }
+    }
+
+    public static class Precision {
+        public static final int PRECISION_NO_ERROR =      1;
+        public static final int PRECISION_SCALE_20 =      3;
+        public static final int PRECISION_NULL     = 999999;
+
+        public static int calculateLowerPrecision(int precision1, int precision2) {
+            return Math.max(precision1, precision2);
+        }
+    }
+}

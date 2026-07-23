@@ -1,29 +1,32 @@
-Blue Line Console은 키보드로 빨리 필요한 앱이나 웹 검색을 실행하고나 간단한 계산 등 하기 위한 런처입니다.
+andmenu는 압도적인 속도와 효율성을 위해 설계된 가볍고 키보드 중심의 런처입니다. dmenu 및 rofi와 같은 도구에서 영감을 받은 andmenu를 통해 앱 실행, 웹 검색, 수식 계산 및 빠른 명령어를 한 번에 실행할 수 있습니다.
 
-명령어를 키보드로 입력하고 조작할 수 있습니다. Package name (예: net.nhiroki.bluelineconsole)의 일부로 앱을 가동할수도 있기 떼문에, 대체로 2-3글자만 입력하면 필요한 앱이 표시됩니다. 앱을 매치할 필요는 없습니다.
+초고속 앱 검색: 2~3글자만 입력해도 원하는 앱을 즉시 찾아 실행합니다.
 
-키보드가 없은 기기에도, Android 디지털 어시스턴스 앱으로 설정하고 모든 화면에서 하위우측 스와이프나 홈 버튼 등 클릭으로 Blue Line Console을 실행 할 수 있습니다.
+퍼지 검색 (Fuzzy Search): 정확한 이름을 몰라도 괜찮습니다. 오타나 일부 이름만으로도 앱을 빠르게 찾아냅니다.
 
-아래와 같이 검색하실 수 있습니다.
+사용 빈도순 정렬: 자주 사용하는 앱이 목록 상단에 자동으로 배치되어 빠르게 접근할 수 있습니다.
 
-- 앱 이름(예: Blue Line Console)의 일부
-- Package name (예: net.nhiroki.bluelineconsole)의 일부
-- URL (예: https://example.com/)
-- 계산식 (예: 2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm)
-- 아래 명령어 (예: help)
+앱 바로가기 및 관리: 앱을 길게 누르면 시스템 앱 정보, 삭제, 목록에서 숨기기, 이름 변경 메뉴를 이용할 수 있습니다.
+
+커스텀 테마: dmenu, Gruvbox, Rosé Pine 등 다양한 테마로 자신만의 취향에 맞게 스타일을 변경할 수 있습니다.
 
 사용 가능한 명령어:
 
 - help
 - config
 - date
-- bing QUERY
-- duckduckgo QUERY
-- google QUERY
-- wikipedia QUERY
-- yahoo QUERY
-- ping HOST
-- ping6 HOST
+- ping 호스트
+- ping6 호스트
+- all_apps
+- hidden_apps
+- bing 검색어 (Bing 검색)
+- d 검색어 (DuckDuckGo)
+- google 검색어 (Google)
+- ecosia 검색어 (Ecosia)
+- maps 검색어 (Google 지도)
+- ytm 검색어 (YouTube Music)
+- yt 검색어 (YouTube)
+- wikipedia 검색어
+- yahoo 검색어
 
-
-소스 코드: https://github.com/nhirokinet/bluelineconsole
+소스 코드: https://github.com/cankurttekin/andmenu

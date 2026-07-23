@@ -1,29 +1,27 @@
-Blue Line Console は、キーボードで素早く必要なアプリやウェブ検索を開いたり、簡単な計算をしたりするためのランチャーです。
-
-コマンドをキーボードから入力することで、快適に操作できます。パッケージ名（例：net.nhiroki.bluelineconsole）の一部でも呼び出せるため、たいていの場合はアルファベットを 2-3 文字入力すれば望むアプリが上に表示されます。アプリを並べる方式のランチャーと異なり、アプリの順序を設定する必要はありません。
-
-物理キーのない端末でも、 Android デフォルトのアシストアプリに設定することにより、ホームボタン長押しで起動することができます。また、通知バーから呼び出し、ソフトウェアキーボードを用いることで、いつも同じようにアプリケーションを起動したり、ウェブ検索をしたりできます。（通知バーに表示する場合は config コマンドから設定する必要があります）
-
-次の一覧のいずれかで検索できます。
-
-- アプリケーション名（例： Blue Line Console）の一部
-- パッケージ名（例： net.nhiroki.bluelineconsole）の一部
-- URL
-- 計算式（例： 2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm）
-- 下記のコマンド一覧のいずれか（例： help）
+andmenu は、圧倒的なスピードと効率性を追求して設計された、軽量でキーボード操作に特化したランチャーです。 dmenu や rofi にインスパイアされた andmenu を使えば、アプリの起動、ウェブ検索、計算式の計算、クイックコマンドの実行がスムーズに行えます。
+爆速アプリ検索: 2〜3文字入力するだけで、目的のアプリを瞬時に検索して起動できます。
+あいまい検索 (Fuzzy Search): 正確な綴りを気にする必要はありません。入力ミスや部分的な名前でもアプリをすばやく見つけられます。
+使用頻度順ソート: よく使うアプリが自動的にリストの上に表示され、より素早くアクセスできます。
+アプリのショートカットと管理: アプリを長押しすることで、アプリ情報、アンインストール、非表示、名前の変更にアクセスできます。
+カスタムテーマ: dmenu、Gruvbox、Rosé Pine などのテーマで、自分好みの見た目にカスタマイズできます。
 
 利用可能なコマンド:
 
-- help
-- config
-- date
-- bing QUERY
-- duckduckgo QUERY
-- google QUERY
-- wikipedia QUERY
-- yahoo QUERY
-- ping HOST
-- ping6 HOST
+    help
+    config
+    date
+    ping ホスト
+    ping6 ホスト
+    all_apps
+    hidden_apps
+    bing 検索ワード (Bing 検索)
+    d 検索ワード (DuckDuckGo)
+    google 検索ワード (Google)
+    ecosia 検索ワード (Ecosia)
+    maps 検索ワード (Google マップ)
+    ytm 検索ワード (YouTube Music)
+    yt 検索ワード (YouTube)
+    wikipedia 検索ワード
+    yahoo 検索ワード
 
-
-ソースコード: https://github.com/nhirokinet/bluelineconsole
+ソースコード: https://github.com/cankurttekin/andmenu

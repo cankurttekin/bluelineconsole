@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">andmenu</string>
     <string name="preferences_item_about_this_app_github_repo">andmenu on GitHub</string>
-    <string name="preferences_item_about_this_app_github_repo_summary">https://github.com/nhirokinet/andmenu に接続</string>
+    <string name="preferences_item_about_this_app_github_repo_summary">https://github.com/cankurttekin/andmenu に接続</string>
 
     <!-- ActivityMain -->
     <string name="displayedFullVersionString">Version %1$s</string>
@@ -217,7 +217,7 @@
         次の一覧のいずれかで検索できます。
         \n
         \n-&#032;アプリケーション名（例： andmenu）の一部
-        \n-&#032;パッケージ名（例： net.nhiroki.andmenu）の一部
+        \n-&#032;パッケージ名（例： com.cankurttekin.andmenu）の一部
         \n-&#032;URL （例： https://example.com/）
         \n-&#032;計算式（例： 2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm）
         \n-&#032;下記のコマンド一覧のいずれか（例： help）

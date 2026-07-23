@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">andmenu</string>
     <string name="preferences_item_about_this_app_github_repo">GitHub 上的 andmenu</string>
-    <string name="preferences_item_about_this_app_github_repo_summary">访问 https://github.com/nhirokinet/andmenu</string>
+    <string name="preferences_item_about_this_app_github_repo_summary">访问 https://github.com/cankurttekin/andmenu</string>
 
     <!-- ActivityMain -->
     <string name="displayedFullVersionString">版本 %1$s</string>
@@ -194,7 +194,7 @@
         你可以输入以下列表之一来搜索应用程序或命令。
         \n
         \n-&#032;应用名称的一部分（比如，andmenu）
-        \n-&#032;包名的一部分（比如，net.nhiroki.andmenu）
+        \n-&#032;包名的一部分（比如，com.cankurttekin.andmenu）
         \n-&#032;URL（比如，https://example.com/）
         \n-&#032;计算公式 （比如， 2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm）
         \n-&#032;下列命令之一 （比如，help）

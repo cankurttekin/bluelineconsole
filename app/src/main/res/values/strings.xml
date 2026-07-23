@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">andmenu</string>
-    <string name="app_source_code_url" translatable="false">https://github.com/nhirokinet/andmenu</string>
+    <string name="app_source_code_url" translatable="false">https://github.com/cankurttekin/andmenu</string>
     <string name="preferences_item_about_this_app_github_repo">andmenu on GitHub</string>
-    <string name="preferences_item_about_this_app_github_repo_summary">Access https://github.com/nhirokinet/andmenu</string>
+    <string name="preferences_item_about_this_app_github_repo_summary">Access https://github.com/cankurttekin/andmenu</string>
 
     <!-- ActivityMain -->
     <string name="displayedFullVersionString">Version %1$s</string>
@@ -23,6 +23,9 @@
     <string name="result_config_summary">Preferences for andmenu</string>
 
     <!-- Themes -->
+    <string name="theme_name_dmenu">dmenu (Light or Dark, according to system setting)</string>
+    <string name="theme_name_dmenu_light">dmenu Light</string>
+    <string name="theme_name_dmenu_dark">dmenu Dark</string>
     <string name="theme_name_default">Blue Line Console (Light or Dark, according to system setting)</string>
     <string name="theme_name_light">Blue Line Console Light</string>
     <string name="theme_name_dark">Blue Line Console Dark</string>
@@ -30,9 +33,6 @@
     <string name="theme_name_old_computer">Old Computer</string>
     <string name="theme_name_gruvbox">Gruvbox</string>
     <string name="theme_name_rosepine">Rose Pine</string>
-    <string name="theme_name_dmenu">dmenu (Light or Dark, according to system setting)</string>
-    <string name="theme_name_dmenu_light">dmenu Light</string>
-    <string name="theme_name_dmenu_dark">dmenu Dark</string>
 
     <!-- Widgets -->
     <string name="widget_launcher_label">andmenu shortcut</string>
@@ -219,7 +219,7 @@
         You can input one of below list to search apps or commands.
         \n
         \n-&#032;Part of application name (e.g. andmenu)
-        \n-&#032;Part of package name (e.g. net.nhiroki.andmenu)
+        \n-&#032;Part of package name (e.g. com.cankurttekin.andmenu)
         \n-&#032;URL (e.g. https://example.com/)
         \n-&#032;Calculation formula (e.g. 2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm)
         \n-&#032;One of commands below (e.g. help)

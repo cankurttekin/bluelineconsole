@@ -7,9 +7,9 @@ android {
     useLibrary 'android.test.base'
     useLibrary 'android.test.mock'
 
-    namespace 'net.nhiroki.andmenu'
+    namespace 'net.cankurttekin.andmenu'
     defaultConfig {
-        applicationId "net.nhiroki.andmenu"
+        applicationId "net.cankurttekin.andmenu"
         versionCode 44
         versionName "1.2.25"
 

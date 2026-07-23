@@ -1,29 +1,32 @@
-Blue Line Console 通過鍵盤以啟動您的應用程式、網頁搜尋引擎以及內建計算機。
+andmenu 是一款輕量級、以鍵盤操作為核心的啟動器，專為極速與高效率而設計。受 dmenu 與 rofi 等工具的啟發，andmenu 讓你能夠快速啟動應用程式、搜尋網頁、計算公式以及執行快捷指令。
 
-您可以使用您的鍵盤以在任何地方快速地啟動想要的應用。就只需輸入 2 或 3 個字元，則有望在選單頂部找到您的目標。您不需要進行組態設定以執行此操作（雖然我為了更加舒適地使用而提供了一些組態）。
+極速應用程式搜尋： 只需輸入 2 到 3 個字元，即可瞬間找到並啟動任何應用程式。
 
-一旦您設定此應用程式為 Android 的預設助理應用，您可以通過長按主畫面鍵啟動它。或者您也可以在任何地方從通知列啟動它（使用 config 命令開啟組態設定，在組態畫面找到此選項）。
+模糊搜尋 (Fuzzy Search)： 無需擔心拼寫是否完全正確，即使輸入有誤或僅輸入部分名稱也能快速尋找。
 
-您可以輸入以下列表之一以搜尋應用程式或執行命令。
+按使用頻率排序： 最常用的應用程式會自動排在清單頂部，方便快速存取。
 
-- 應用程式名稱的部分（例如：Blue Line Console）
-- 套件（package）名稱的部分（例如：net.nhiroki.bluelineconsole）
-- URL
-- 計算方程式（例如：2+3*5, 1inch in cm, 1m+1inch, 1m+1inch in cm）
-- 以下命令其中之一（例如：help）
+應用程式捷徑與管理： 長按任何應用程式，即可檢視系統應用程式資訊、解除安裝、隱藏或重新命名。
 
-可用的命令：
+自訂主題： 支援 dmenu、Gruvbox、Rosé Pine 等多款主題，打造符合你風格的極簡介面。
 
-- help
-- config
-- date
-- bing 查詢
-- duckduckgo 查詢
-- google 查詢
-- wikipedia 查詢
-- yahoo 查詢
-- ping 主機
-- ping6 主機
+可用指令：
 
+    help
+    config
+    date
+    ping 主機
+    ping6 主機
+    all_apps
+    hidden_apps
+    bing 搜尋內容 (Bing 搜尋)
+    d 搜尋內容 (DuckDuckGo)
+    google 搜尋內容 (Google)
+    ecosia 搜尋內容 (Ecosia)
+    maps 搜尋內容 (Google 地圖)
+    ytm 搜尋內容 (YouTube Music)
+    yt 搜尋內容 (YouTube)
+    wikipedia 搜尋內容
+    yahoo 搜尋內容
 
-原始碼: https://github.com/nhirokinet/bluelineconsole
+原始碼: https://github.com/cankurttekin/andmenu

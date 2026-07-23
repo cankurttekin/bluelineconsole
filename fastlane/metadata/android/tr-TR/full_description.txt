@@ -1,0 +1,32 @@
+andmenu, yıldırım hızında kullanım ve verimlilik için tasarlanmış hafif ve klavye odaklı bir başlatıcıdır. dmenu ve rofi gibi araçlardan esinlenen andmenu; uygulamaları başlatmanıza, web'de arama yapmanıza, hesaplamalar yapmanıza ve hızlı komutlar çalıştırmanıza olanak tanır.
+
+Yıldırım Hızında Uygulama Arama: İstediğiniz uygulamayı anında bulup başlatmak için 2 veya 3 harf yazmanız yeterli.
+
+Bulanık Arama (Fuzzy Search): Tam yazılışı dert etmeyin; yazım hataları veya kısmi isimlerle bile uygulamaları kolayca bulun.
+
+Kullanım Sıklığına Göre Sıralama: En çok kullandığınız uygulamalar daha hızlı erişim için otomatik olarak listenin üstüne taşınır.
+
+Uygulama Kısayolları ve Yönetimi: Sistem uygulama bilgilerine erişmek, kaldırmak, listeden gizlemek veya yeniden adlandırmak için herhangi bir uygulamaya uzun basın.
+
+Özel Temalar: Başlatıcınızı dmenu, Gruvbox, Rosé Pine ve daha fazla tema seçeneğiyle tarzınıza göre özelleştirin.
+
+Komutlar:
+
+    help
+    config
+    date
+    ping SUNUCU
+    ping6 SUNUCU
+    all_apps
+    hidden_apps
+    bing SORGU (Bing araması)
+    d SORGU (DuckDuckGo)
+    google SORGU (Google)
+    ecosia SORGU (Ecosia)
+    maps SORGU (Google Haritalar)
+    ytm SORGU (YouTube Music)
+    yt SORGU (YouTube)
+    wikipedia SORGU
+    yahoo SORGU
+
+Source Code: https://github.com/cankurttekin/andmenu

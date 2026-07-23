@@ -1,12 +1,11 @@
 andmenu Privacy Policy
 
 
-1. Coverage of this Privacy Policy: This Privacy Policy covers the behavior of andmenu application released on the links on List 1 below by nhirokinet, as long as andmenu is run on Android with API that is not modified from the one documented in https://developer.android.com/. Please beware that anything outside of andmenu application is not covered by this Privacy Policy, including any devices, softwares, or services you use to run or download andmenu. If the user send the developer any information by the method out of andmenu, including e-mails or GitHub issues, this Privacy Policy is not applied.
+1. Coverage of this Privacy Policy: This Privacy Policy covers the behavior of andmenu application released on the links on List 1 below by cankurttekin, as long as andmenu is run on Android with API that is not modified from the one documented in https://developer.android.com/. Please beware that anything outside of andmenu application is not covered by this Privacy Policy, including any devices, softwares, or services you use to run or download andmenu. If the user send the developer any information by the method out of andmenu, including e-mails or GitHub issues, this Privacy Policy is not applied.
 
   List 1: Links that the andmenu is released under this Privacy Policy
-    - https://github.com/nhirokinet/bluelineconsole/releases
-    - https://play.google.com/store/apps/details?id=net.nhiroki.bluelineconsole
-    - https://f-droid.org/en/packages/net.nhiroki.bluelineconsole/
+    - https://github.com/cankurttekin/bluelineconsole/releases
+    - https://f-droid.org/en/packages/cankurttekin/andmenu
 
 
 2. The user's explicit action before sending out the information: andmenu does not, and will not in the future, send out an information out of the device without the user's explicit action to do so. Reading this Privacy Policy is not regarded as an explicit action, so an explicit action within the andmenu application is required before sending out any information. Please note that this applies only to andmenu itself. If you download andmenu from any store, source code repository or any other systems, the services may gather and use the user's information under their policies. The user's OS may send out information saved in andmenu, to automatically backup for example, under OS's policies. If you selected to open applications, links, or any other contents or programs that is opened out of andmenu, the application, the user's browser, or any related application may send out the information with their or their contents' policy.
