@@ -71,5 +71,6 @@ public class DmenuTheme extends BaseTheme {
 
     @Override
     public void onCreateFinal(BaseWindowActivity activity) {
+        super.onCreateFinal(activity);
     }
 }
