@@ -3,7 +3,6 @@ package com.cankurttekin.andmenu.applicationMain;
 import android.animation.LayoutTransition;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +16,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
+import androidx.preference.PreferenceManager;
 
 import com.cankurttekin.andmenu.R;
 import com.cankurttekin.andmenu.applicationMain.theming.AppTheme;
@@ -151,6 +151,15 @@ public class BaseWindowActivity extends AppCompatActivity {
             }
         } else {
             this.disableWindowAnimationForElements();
+        }
+
+        if (this.iAmHomeActivity && PreferenceManager.getDefaultSharedPreferences(this).getBoolean("pref_home_hide_status_bar", false)) {
+            WindowInsetsControllerCompat windowInsetsControllerCompat = new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+            windowInsetsControllerCompat.hide(WindowInsetsCompat.Type.statusBars());
+            windowInsetsControllerCompat.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+        } else {
+            WindowInsetsControllerCompat windowInsetsControllerCompat = new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+            windowInsetsControllerCompat.show(WindowInsetsCompat.Type.statusBars());
         }
 
         this.currentTheme.findWholeDisplayView(this).getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {

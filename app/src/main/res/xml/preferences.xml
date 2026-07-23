@@ -168,6 +168,13 @@
             android:title="@string/preferences_item_home_set_wallpaper_title"
             app:iconSpaceReserved="false"
             />
+        <SwitchPreference
+            android:key="pref_home_hide_status_bar"
+            android:title="@string/preferences_item_home_hide_status_bar_title"
+            android:summary="@string/preferences_item_home_hide_status_bar_summary"
+            android:defaultValue="false"
+            app:iconSpaceReserved="false"
+            />
         <Preference
             android:title="@string/preferences_item_home_screen_default_items"
             android:summary="@string/preferences_item_home_screen_default_items_summary"

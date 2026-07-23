@@ -121,6 +121,8 @@
     <string name="preferences_item_home_screen_default_items">Home screen items</string>
     <string name="preferences_item_home_set_solid_color_wallpaper_title">Set solid color as wallpaper</string>
     <string name="preferences_item_home_set_wallpaper_title">Set wallpaper</string>
+    <string name="preferences_item_home_hide_status_bar_title">Hide status bar</string>
+    <string name="preferences_item_home_hide_status_bar_summary">Hide the status bar when andmenu is used as the home screen.</string>
     <string name="preferences_item_home_screen_default_items_summary">Display results and widgets when nothing is input at home screen, when andmenu is set to home app.</string>
     <string name="preferences_item_contacts_enable_search">Enable contacts search</string>
     <string name="preferences_item_contacts_search_permission_explanation">Enabling contacts search requires permission to read Contacts. You may be asked to grant the access to Contacts.</string>

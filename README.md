@@ -6,17 +6,27 @@ Keyboard based launcher for Android
 ### Screenshots
 <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="240"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="240"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="240">
 
+### Additional features to [Blue Line Console](https://github.com/nhirokinet/bluelineconsole)
+- Fuzzy application search (optional)
+- Sort results by usage frequency (optional)
+- Additional search engines: ecosia, maps, youtube, youtube music
+- Launch system settings windows like wifi, bluetooth, mobile data, location, airplane mode using sys <setting>
+- Hide status bar when used as launcher (optional)
+
+
 ### TODO
 - [x] Fuzzy search option
 - [x] Sort by usage freq. option
 - [x] New search engines (ecosia, maps, yt, yt music, etc)
-- [ ] Custom commands
+- [x] Custom commands to change system settings
 - [ ] Search files, images etc
 - [ ] Todo or note taking
 - [x] Long press apps to show app info, uninstall, hide and rename
 - [x] New themes (dmenu, gruvbox, rosepine, etc)
 - [x] Set as default launcher option
 - [x] Set wallpaper or solid color
+- [x] Hide status bar when set as launcher
+- [ ] Add as contact and/or call a number
 
 
 ---
