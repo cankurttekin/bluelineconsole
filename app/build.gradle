@@ -10,8 +10,8 @@ android {
     namespace "com.cankurttekin.andmenu"
     defaultConfig {
         applicationId "com.cankurttekin.andmenu"
-        versionCode 44
-        versionName "1.2.25"
+        versionCode 45
+        versionName "1.3.00"
 
         minSdkVersion 23
         targetSdkVersion 36
