@@ -1,8 +1,10 @@
 ## <img src="./fastlane/metadata/android/en-US/images/icon.png" width="32" height="32"> andmenu
 
-Keyboard based launcher for Android
+Fast, keyboard-driven Android launcher inspired by dmenu and rofi.
 
-
+[<img src="https://f-droid.org/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/com.cankurttekin.andmenu/)
 ### Screenshots
 <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="240"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="240"> <img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="240">
 
