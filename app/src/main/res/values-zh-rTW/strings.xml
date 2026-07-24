@@ -22,6 +22,7 @@
     <string name="result_config_summary">andmenu 偏好設定</string>
 
     <!-- Themes -->
+    <string name="theme_name_dmenu_dark">dmenu Dark</string>
     <string name="theme_name_default">預設（淺色或深色，取決於系統設定）</string>
     <string name="theme_name_light">淺色</string>
     <string name="theme_name_dark">深色</string>
@@ -29,6 +30,7 @@
     <string name="theme_name_old_computer">舊電腦</string>
 
     <!-- Widgets -->
+    <string name="theme_name_rosepine">Rose Pine</string>
     <string name="widget_launcher_label">andmenu 捷徑</string>
 
     <!-- String match strategies -->
@@ -45,6 +47,7 @@
     <string name="button_update">更新</string>
     <string name="button_delete">刪除</string>
     <string name="button_close">關閉</string>
+    <string name="button_cancel">Cancel</string>
     <string name="button_increment_minimal">+</string>
     <string name="button_decrement_minimal">-</string>
 
@@ -86,22 +89,31 @@
     <string name="preferences_item_main_show_startup_help_summary">此選項只是向您顯示 help 命令的指南。在您記住 "help" 命令後，建議禁用此選項。</string>
     <string name="preferences_item_default_assist_app_title">設定為預設的助理應用程式</string>
     <string name="preferences_item_default_assist_app_summary">通過在任何地方長按首頁按鈕開啟 andmenu，從設定選單設定它為預設助理應用程式。</string>
+    <string name="preferences_item_default_home_app_summary">To use andmenu as your home screen, set it as default home app from setting menu.</string>
     <string name="preferences_item_main_always_show_notification_title">總是顯示通知圖示</string>
     <string name="preferences_item_main_always_show_notification_summary">總是顯示通知圖示以在任何地方啟動 andmenu。</string>
+    <string name="preferences_item_main_run_mode_title">Run mode</string>
+    <string name="preferences_item_main_run_mode_summary">允許在命令列快速存取系統設定面板（sys），如 WiFi、藍牙等。</string>
     <string name="preferences_item_text_match_strategy_title">文字搜尋匹配樣式</string>
     <string name="preferences_item_appearance_theme_title">主題</string>
+    <string name="preferences_item_appearance_placeholder_text_title">Input placeholder text</string>
     <string name="preferences_item_appearance_theme_summary">當此選項變更時，andmenu 會立即重新啟動。</string>
     <string name="preferences_item_appearance_accent_color">重點色彩</string>
     <string name="preferences_item_appearance_animation_title">動畫</string>
     <string name="preferences_item_appearance_show_icons_title">Show icons</string>
     <string name="preferences_item_apps_show_package_name_title">顯示套件（package）名稱</string>
     <string name="preferences_item_apps_show_package_name_summary">注意：即使此未核取此選項，您依然可以由名稱的一部分找到應用程式。</string>
+    <string name="preferences_item_apps_sort_by_usage_title">Sort by usage frequency</string>
+    <string name="preferences_item_apps_sort_by_usage_summary">Display frequently used apps at the top of the search results.</string>
     <string name="preferences_item_display_custom_urls_title">網頁與搜尋</string>
     <string name="preferences_item_default_search_title">預設搜尋引擎</string>
     <string name="preferences_item_default_search_summary">總是顯示指定的搜尋引擎於選單底部</string>
     <string name="preferences_item_default_search_option_none">（無）</string>
     <string name="preferences_item_custom_commands_widgets">小工具命令</string>
     <string name="preferences_item_home_screen_default_items">主畫面項目</string>
+    <string name="preferences_item_home_set_wallpaper_title">Set wallpaper</string>
+    <string name="preferences_item_home_hide_status_bar_title">隱藏狀態列</string>
+    <string name="preferences_item_home_hide_status_bar_summary">當 andmenu 被用作主畫面時隱藏狀態列。</string>
     <string name="preferences_item_home_screen_default_items_summary">當 andmenu 被設定為主畫面應用程式，在主畫面沒有任何輸入時，顯示結果與小工具。</string>
     <string name="preferences_item_contacts_enable_search">啟用聯絡人搜尋</string>
     <string name="preferences_item_contacts_search_permission_explanation">啟用聯絡人搜尋需要讀取聯絡人的權限。您也許會被詢問是否授權存取聯絡人。</string>
@@ -155,6 +167,7 @@
     <string name="contacts_action_email">電子郵件：%1$s</string>
 
     <!-- Error messages, user errors -->
+    <string name="dialog_title_rename_format">Rename %1$s</string>
     <string name="error_invalid_url_least_validation_for_web">無效的 URL：開頭必須為 https:// 或 http:// 並且至少一個斜線（\"/\"）。</string>
     <string name="error_invalid_url_least_validation_for_web_arbitrary_schema">無效的 URL：開頭必須為 &lt;scheme&gt;:// 並且至少一個斜線（\"/\"）。</string>
     <string name="error_invalid_command_name">無效的名稱：命令不能包含空格，並且不能為空</string>
@@ -221,4 +234,20 @@
         \n提示：將 andmenu 設定於助理應用。設定方式：設定 &gt; 應用程式 &amp; 通知 &gt; 預設應用程式 &gt; 數位助理應用程式或類似的選單，以在長按主畫面鍵時開啟 andmenu。
         \n提示：可以通過常駐通知從通知選單啟動 andmenu。從 config 命令找到該選項。
     </string>
+    <string name="factor_error_not_valid_integer">不是有效的整數</string>
+    <string name="factor_error_not_positive_number">不是正數</string>
+    <string name="factor_error_factor_too_large">包含大於 %1$s 的因數</string>
+    <string name="menu_item_app_info">App Info</string>
+    <string name="menu_item_rename">Rename</string>
+    <string name="menu_item_hide">Hide</string>
+    <string name="menu_item_unhide">Unhide</string>
+    <string name="menu_item_uninstall">Uninstall</string>
+    <string name="preferences_item_home_set_solid_color_wallpaper_title">Set solid color as wallpaper</string>
+    <string name="preferences_item_appearance_show_header_title">Show header text</string>
+    <string name="preferences_item_appearance_header_text_title">Header text</string>
+    <string name="preferences_item_default_home_app_title">Set as default home app</string>
+    <string name="button_ok">OK</string>
+    <string name="theme_name_dmenu">dmenu (Light or Dark, according to system setting)</string>
+    <string name="theme_name_dmenu_light">dmenu Light</string>
+    <string name="theme_name_gruvbox">Gruvbox</string>
 </resources>

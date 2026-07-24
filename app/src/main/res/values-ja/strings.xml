@@ -97,6 +97,8 @@
     <string name="preferences_item_default_home_app_summary">andmenu をホーム画面として使用するには、設定メニューからデフォルトのホームアプリに設定してください。</string>
     <string name="preferences_item_main_always_show_notification_title">通知を常に表示</string>
     <string name="preferences_item_main_always_show_notification_summary">どこからでも andmenu を起動できるよう、通知を常に表示します。</string>
+    <string name="preferences_item_main_run_mode_title">Run mode</string>
+    <string name="preferences_item_main_run_mode_summary">設定画面（sys）へのショートカットをコマンド入力欄で使えるようにします。</string>
     <string name="preferences_item_text_match_strategy_title">検索時の文字列マッチ</string>
     <string name="preferences_item_appearance_theme_title">テーマ</string>
     <string name="preferences_item_appearance_show_header_title">ヘッダーテキストを表示</string>
@@ -118,6 +120,8 @@
     <string name="preferences_item_home_screen_default_items">ホームスクリーンの項目</string>
     <string name="preferences_item_home_set_solid_color_wallpaper_title">壁紙を単色に設定する</string>
     <string name="preferences_item_home_set_wallpaper_title">壁紙を設定する</string>
+    <string name="preferences_item_home_hide_status_bar_title">ステータスバーを隠す</string>
+    <string name="preferences_item_home_hide_status_bar_summary">andmenu がホーム画面として使用されている場合に、ステータスバーを非表示にします。</string>
     <string name="preferences_item_home_screen_default_items_summary">ホームスクリーンとして起動され、コマンドが何も入力されていない場合に表示する項目を設定します</string>
     <string name="preferences_item_contacts_enable_search">連絡先からの検索を有効にする</string>
     <string name="preferences_item_contacts_search_permission_explanation">有効にする場合は連絡先からの読み込み権限が必要になります。別途明示的な許可操作を求められる場合があります。</string>

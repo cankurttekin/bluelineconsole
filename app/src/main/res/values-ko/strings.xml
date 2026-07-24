@@ -22,6 +22,7 @@
     <string name="result_config_summary">andmenu 설정</string>
 
     <!-- Themes -->
+    <string name="theme_name_dmenu_dark">dmenu Dark</string>
     <string name="theme_name_default">디폴트 (라이트나 다크, 시스템 설정 기준)</string>
     <string name="theme_name_light">라이트</string>
     <string name="theme_name_dark">다크</string>
@@ -29,6 +30,7 @@
     <string name="theme_name_old_computer">Old Computer</string>
 
     <!-- Widgets -->
+    <string name="theme_name_rosepine">Rose Pine</string>
     <string name="widget_launcher_label">andmenu 바로가기</string>
 
     <!-- String match strategies -->
@@ -45,6 +47,7 @@
     <string name="button_update">변경</string>
     <string name="button_delete">삭제</string>
     <string name="button_close">닫기</string>
+    <string name="button_cancel">Cancel</string>
     <string name="button_increment_minimal">+</string>
     <string name="button_decrement_minimal">-</string>
 
@@ -86,22 +89,31 @@
     <string name="preferences_item_main_show_startup_help_summary">"help" 명령어를 안내합니다. "help"명령어를 기억하셨면 비활성화를 권장합니다.</string>
     <string name="preferences_item_default_assist_app_title">디지털 어시스턴트 앱으로 설정</string>
     <string name="preferences_item_default_assist_app_summary">Android 설정에서 디지털 어시스턴트 앱으로 설정하면, 모든 화면에서 하위우측 스와이프나 홈 버튼 롱 클릭으로 andmenu을 기동 할 수 있습니다.</string>
+    <string name="preferences_item_default_home_app_summary">To use andmenu as your home screen, set it as default home app from setting menu.</string>
     <string name="preferences_item_main_always_show_notification_title">상시 알림 표시</string>
     <string name="preferences_item_main_always_show_notification_summary">모든 화면에서 andmenu을 기동하기 위해 알림을 상시 표시합니다.</string>
+    <string name="preferences_item_main_run_mode_title">Run mode</string>
+    <string name="preferences_item_main_run_mode_summary">명령어 입력창에서 설정 패널(sys)에 빠르게 접근할 수 있도록 합니다.</string>
     <string name="preferences_item_text_match_strategy_title">문자열 매칭 방법</string>
     <string name="preferences_item_appearance_theme_title">테마</string>
+    <string name="preferences_item_appearance_placeholder_text_title">Input placeholder text</string>
     <string name="preferences_item_appearance_theme_summary">테마를 변경하면, andmenu이 재시작합니다.</string>
     <string name="preferences_item_appearance_accent_color">악센트 컬러</string>
     <string name="preferences_item_appearance_animation_title">애니메이션</string>
     <string name="preferences_item_appearance_show_icons_title">아이콘을 표시함</string>
     <string name="preferences_item_apps_show_package_name_title">Package name을 표시</string>
     <string name="preferences_item_apps_show_package_name_summary">이 옵션이 비활성화되어도 package name으로 앱을 검색 할 수 있습니다.</string>
+    <string name="preferences_item_apps_sort_by_usage_title">Sort by usage frequency</string>
+    <string name="preferences_item_apps_sort_by_usage_summary">Display frequently used apps at the top of the search results.</string>
     <string name="preferences_item_display_custom_urls_title">URL와 검색 엔진 설정</string>
     <string name="preferences_item_default_search_title">디폴트 검색 엔진</string>
     <string name="preferences_item_default_search_summary">설정된 검색 엔진으로의 웹 검색을 결과로 표시합니다.</string>
     <string name="preferences_item_default_search_option_none">(없음)</string>
     <string name="preferences_item_custom_commands_widgets">위젯 명령어</string>
     <string name="preferences_item_home_screen_default_items">홈 화면 항목</string>
+    <string name="preferences_item_home_set_wallpaper_title">Set wallpaper</string>
+    <string name="preferences_item_home_hide_status_bar_title">상태 표시줄 숨기기</string>
+    <string name="preferences_item_home_hide_status_bar_summary">andmenu가 홈 화면으로 사용될 때 상태 표시줄을 숨깁니다.</string>
     <string name="preferences_item_home_screen_default_items_summary">홈 화면으로 기동하고 명령어가 입력되지 않는 경우 표시될 항목을 설정합니다.</string>
     <string name="preferences_item_contacts_enable_search">주소록 검색</string>
     <string name="preferences_item_contacts_search_permission_explanation">활성화하기 위해는 주소록 접근 권한이 필요합니다. 별도 허용 조작이 필요할 수 있습니다.</string>
@@ -160,6 +172,7 @@
     <string name="factor_error_factor_too_large">%1$s보다 큰 소인수을 포함합니다</string>
 
     <!-- Error messages, user errors -->
+    <string name="dialog_title_rename_format">Rename %1$s</string>
     <string name="error_invalid_url_least_validation_for_web">URL 포맷 부정: https:// 나 http:// 로 시작해, 더 하나 이상 슬래시(\"/\")를 포함할 필요가 있습니다</string>
     <string name="error_invalid_url_least_validation_for_web_arbitrary_schema">URL 포맷 오류: &lt;scheme&gt;:// 로 시작해, 더 하나 이상 슬래시(\"/\")를 포함할 필요가 있습니다</string>
     <string name="error_invalid_command_name">명령어는 스페이스를 포함할 수 없고, 1 글자 이상인 필요가 있습니다.</string>
@@ -225,4 +238,17 @@
         \n힌트: 설정 &gt; 앱 &gt; 기본 앱 &gt; 디지털 어시스턴스 앱, 이나 같은 메뉴에서 andmenu을 디지털 어시스턴트 앱으로 설정하면, 모든 화면에서 하위우측 스와이프나 홈 버튼 롱 클릭으로 andmenu을 기동 할 수 있습니다.
         \n힌트: andmenu 아이콘을 상시 알림으로 표시할 설정이 config 명령의 메뉴에서 가능합니다.
     </string>
+    <string name="menu_item_app_info">App Info</string>
+    <string name="menu_item_rename">Rename</string>
+    <string name="menu_item_hide">Hide</string>
+    <string name="menu_item_unhide">Unhide</string>
+    <string name="menu_item_uninstall">Uninstall</string>
+    <string name="preferences_item_home_set_solid_color_wallpaper_title">Set solid color as wallpaper</string>
+    <string name="preferences_item_appearance_show_header_title">Show header text</string>
+    <string name="preferences_item_appearance_header_text_title">Header text</string>
+    <string name="preferences_item_default_home_app_title">Set as default home app</string>
+    <string name="button_ok">OK</string>
+    <string name="theme_name_dmenu">dmenu (Light or Dark, according to system setting)</string>
+    <string name="theme_name_dmenu_light">dmenu Light</string>
+    <string name="theme_name_gruvbox">Gruvbox</string>
 </resources>
